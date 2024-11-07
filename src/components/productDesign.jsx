@@ -3,8 +3,6 @@ import styled, { keyframes } from "styled-components";
 import { device } from "../generalStyles";
 import {
   motion,
-  useAnimate,
-  stagger,
   useMotionValue,
   useTransform,
 } from "framer-motion";
@@ -218,7 +216,7 @@ const Product = () => {
     return onScroll(() => progress.set(scrollState.visibility));
   }, [onScroll, progress, scrollState]);
 
-  const y = useTransform(progress, [0, 1], [100, 0]);
+  // const y = useTransform(progress, [0, 1], [100, 0]);
   const x = useTransform(progress, [0, 1], ["2%", "0%"]);
   // const opacity = useTransform(progress, [0, 1], [0, 1]);
 

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { device } from "../generalStyles";
 import { motion } from "framer-motion";
 
@@ -62,15 +62,15 @@ const Accent = styled.span`
   padding-left: 8px;
 `;
 
-const Button = styled(Link)`
-  color: #316fff;
-  font-size: 1rem;
-  font-family: SF UI Display Thin;
+// const Button = styled(Link)`
+//   color: #316fff;
+//   font-size: 1rem;
+//   font-family: SF UI Display Thin;
 
-  @media ${device.tablet} {
-    font-size: 1.5rem;
-  }
-`;
+//   @media ${device.tablet} {
+//     font-size: 1.5rem;
+//   }
+// `;
 
 const Image = styled.img`
   width: 50%;

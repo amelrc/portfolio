@@ -40,7 +40,7 @@ const ResizableWord = ({ style, href, navitem }) => {
     handleResize(); // Immediately apply the resizing logic on initial mount
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [word]);
+  }, [word, navitem]);
 
   return (
     <Links style={style} navitem={word} to={href} onClick={handleClick}>

@@ -76,28 +76,28 @@ const Description = styled.p`
   }
 `;
 
-const H2 = styled(motion.h2)`
-  font-family: "SF UI Display Thin";
-  color: #49014f;
-  font-size: 2.5rem;
-  margin: 8% 0;
+// const H2 = styled(motion.h2)`
+//   font-family: "SF UI Display Thin";
+//   color: #49014f;
+//   font-size: 2.5rem;
+//   margin: 8% 0;
 
-  @media ${device.tablet} {
-    font-size: 5vw;
-  }
-`;
+//   @media ${device.tablet} {
+//     font-size: 5vw;
+//   }
+// `;
 
-const Accent = styled.span`
-  font-family: "Roxborough Bold";
-  font-size: 2.5rem;
-  color: #38ff70;
-  -webkit-text-stroke: 1px #ed00ff;
-  text-align: center;
+// const Accent = styled.span`
+//   font-family: "Roxborough Bold";
+//   font-size: 2.5rem;
+//   color: #38ff70;
+//   -webkit-text-stroke: 1px #ed00ff;
+//   text-align: center;
 
-  @media ${device.tablet} {
-    font-size: 5vw;
-  }
-`;
+//   @media ${device.tablet} {
+//     font-size: 5vw;
+//   }
+// `;
 
 const ClientCard = ({ href, imageSrc, logoSrc, heading, description }) => {
   const el = useRef();

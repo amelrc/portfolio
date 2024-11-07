@@ -46,7 +46,7 @@ export const TextWrapper = styled.div`
 `;
 
 const About = () => {
-  const textAreaRef = useRef(null);
+  // const textAreaRef = useRef(null);
   const designTools = [
     "UI",
     "UX",

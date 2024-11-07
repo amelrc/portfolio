@@ -1,16 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 import { NavTop, NavBot } from "./components/Nav";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
-import BSP from "./pages/bspSoftware";
+// import BSP from "./pages/bspSoftware";
 // import TestBG from "./pages/heroBG";
-import Menu from "./pages/menu";
-import About from "./pages/about";
-import Contact from "./pages/contact";
+// import Menu from "./pages/menu";
+// import About from "./pages/about";
+// import Contact from "./pages/contact";
 import Home from "./pages/Home/home";
-import Logos from "./pages/logos";
-import Rubrics from "./pages/rubrics";
-import Freelance from "./pages/freelance";
+// import Logos from "./pages/logos";
+// import Rubrics from "./pages/rubrics";
+// import Freelance from "./pages/freelance";
 import CustomCursor from "./components/CustomeCursor";
 
 const App = () => {

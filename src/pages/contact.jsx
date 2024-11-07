@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React, { useState, useRef, useEffect } from "react";
 import { MenuWrapper } from "./menu";
-import AboutImage from "../images/about.JPG";
+
 import { device } from "../generalStyles";
 
 export const TextWrapper = styled.div`

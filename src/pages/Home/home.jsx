@@ -23,14 +23,14 @@ import {
   TextWrapper,
   ImageWrapper,
   H1,
-  H2,
+  
   P1,
   P2,
   P3,
   P4,
-  ProjectList,
+
   Memoji,
-  Accent,
+
 } from "./homeStyles";
 import { FlexColCen } from "../../generalStyles";
 
