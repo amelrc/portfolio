@@ -173,7 +173,7 @@ const Product = () => {
     {
       bg: "linear-gradient(45deg, #F35800, #C61F1F)",
       title: "Design Systems",
-      text: 'Transform your vision into a strategic design plan that aligns with your business goals, ensuring every design decision drives measurable results',
+      text: 'Create a cohesive and scalable design system that streamlines your brand’s digital presence, ensuring consistency and efficiency across all platforms',
       position: "end",
       alignItems: 'flex-end',
       
@@ -181,21 +181,21 @@ const Product = () => {
     {
       bg: "linear-gradient(45deg, #1C8A31, #167665)",
       title: "Workshop Facilitation",
-      text: 'Transform your vision into a strategic design plan that aligns with your business goals, ensuring every design decision drives measurable results',
+      text: "Lead dynamic workshops that unlock your team's creativity, align stakeholders, and generate actionable insights for your projects",
       position: "start",
       alignItems: 'flex-start'
     },
     {
       bg: "linear-gradient(45deg, #2795FB, #002091)",
       title: "Design Sprints",
-      text: 'Transform your vision into a strategic design plan that aligns with your business goals, ensuring every design decision drives measurable results',
+      text: 'Rapidly validate ideas and solve complex problems with a structured, four-day design sprint that brings your best solutions to life quickly',
       position: "end",
       alignItems: 'flex-end'
     },
     {
       bg: "linear-gradient(45deg, #8B53D2, #5A3BD3)",
       title: "Web & Mobile App Design ",
-      text: 'Transform your vision into a strategic design plan that aligns with your business goals, ensuring every design decision drives measurable results',
+      text: 'Craft visually stunning and user-centric web and mobile experiences that engage users and convert them into loyal customers',
       position: "start",
       alignItems: 'flex-start'
     },
