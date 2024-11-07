@@ -119,7 +119,7 @@ const Decoration = styled(motion.img)`
 const TextWrapper = styled.div`
     // margin: auto;
     // width: 90%;
-    padding: 0 10%;
+    padding: 2% 10%;
 
     // @media ${device.tablet} {
       // width: 80%;
