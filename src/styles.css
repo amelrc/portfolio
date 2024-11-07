@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+  
+ p {
+   color: #36003A;
+ } 
+
+@font-face {
+  font-family: 'SF UI Display Thin';
+  src: url('./font/SF_UI_Display/thin.otf') format('truetype');
+}
+@font-face {
+  font-family: 'SF UI Display Light';
+  src: url('./font/SF_UI_Display/light.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SF UI Display Bold';
+  src: url('./font/SF_UI_Display/semibold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roxborough Thin';
+  src: url('./font/Roxborough/RoxboroughCF-Thin.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roxborough Bold';
+  src: url('./font/Roxborough/RoxboroughCF-DemiBold.otf') format('truetype');
+}
+
+
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(100deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* @keyframes moveVertical {
+  0% {
+    transform: rotateY(-50%);
+  }
+  50% {
+    transform: rotateY(50%);
+  }
+  100% {
+    transform: rotateY(-50%);
+  }
+}
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+} */
+
+
+.gradient-bg {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  top:0;
+  left:0
+}
+
+svg {
+  display: none;
+}
+
+
+
+.outerRed {
+  position: absolute;
+  background: radial-gradient(circle, rgb(193, 101, 159) 0%, rgba(215, 38, 89, 0) 50%) no-repeat;
+  mix-blend-mode: hard-light;
+
+  width: 80%;
+  height: 80%;
+  /* top: calc(50% - 80%/2);
+  left: calc(50% - 80%/2); */
+
+  transform-origin: calc(50% - 400px);
+  animation: moveInCircle 20s reverse infinite;
+}
+
+.center {
+  background: radial-gradient(circle, rgb(191, 207, 12) 0%, rgba(91, 157, 72, 0) 50%) no-repeat;
+  mix-blend-mode: hard-light;
+
+  width: 100%;
+  height: 100%;
+  /* top: calc(50% - 100%/2);
+  left: calc(50% - 100%/2); */
+
+
+}
+.outerBlue {
+
+  position: absolute;
+  background: radial-gradient(circle, rgb(48, 138, 255) 0%, rgba(165, 155, 212, 0) 50%) no-repeat;
+  mix-blend-mode: hard-light;
+
+  width: calc(80% * 2);
+  height: calc(80% * 2);
+  top: calc(40% - 80%/2);
+  left: calc(40% - 80%/2);
+
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation: moveInCircle 20s infinite;
+
+
+}
+
+
+/* ////////////////////////// */
+
+
+
+
