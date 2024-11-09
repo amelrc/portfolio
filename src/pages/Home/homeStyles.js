@@ -36,18 +36,6 @@ export const H1 = styled(motion.h1)`
   color: #36003a;
 `;
 
-export const Accent = styled.span`
-  font-family: "Roxborough Bold";
-  font-size: 2.5rem;
-  color: #38ff70;
-  -webkit-text-stroke: 1px #ed00ff;
-  text-align: center;
-
-  @media ${device.tablet} {
-    font-size: 5vw;
-  }
-`;
-
 export const H2 = styled.h2`
   font-family: "SF UI Display Thin";
   color: #49014f;
@@ -70,7 +58,7 @@ export const P1 = styled(motion.p)`
 `;
 
 export const P2 = styled(motion.p)`
-  color:#ED00FF;
+  color: #ed00ff;
   font-family: "Roxborough Bold";
   font-size: 4.5rem;
   text-align: center;
@@ -86,7 +74,7 @@ export const P3 = styled(motion.p)`
 
   mix-blend-mode: hard-light;
   color: transparent;
-  -webkit-text-stroke: 1px #36003A;
+  -webkit-text-stroke: 1px #36003a;
   text-align: center;
   @media ${device.tablet} {
     font-size: 6vw;

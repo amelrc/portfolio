@@ -26,6 +26,7 @@ import {
   Memoji,
 } from "./homeStyles";
 import { FlexColCen } from "../../generalStyles";
+import Principles from "../../components/principles";
 
 const Home = () => {
   const textData = [
@@ -137,6 +138,9 @@ const Home = () => {
         src={AllWork}
         alt="all work"
       />
+
+      <Principles />
+
       <About />
     </FlexColCen>
   );

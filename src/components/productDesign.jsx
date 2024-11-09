@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import { device } from "../generalStyles";
+import { device, Heading2, Subtitle } from "../generalStyles";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useScrollbar, useTracker } from "@14islands/r3f-scroll-rig";
 import Grid from "../images/Grid_large.svg";
@@ -23,28 +23,6 @@ const Wrapper = styled(motion.div)`
 }
   @media ${device.tablet} {
     // height: 800px;
-  }
-`;
-
-const H2 = styled.p`
-  font-family: "SF UI Display Thin";
-  color: #49014f;
-  font-size: 1.5rem;
-  text-align: center;
-  @media ${device.tablet} {
-    font-size: 2.8rem;
-  }
-`;
-
-const Accent = styled.p`
-  font-family: "Roxborough Bold";
-  font-size: 2.5rem;
-  color: #38ff70;
-  text-align: center;
-  -webkit-text-stroke: 1px #bf8b1f;
-
-  @media ${device.tablet} {
-    font-size: 5rem;
   }
 `;
 
@@ -214,8 +192,10 @@ const Product = () => {
   return (
     <div id="services" ref={el} style={{ width: "100%" }}>
       <div style={{ padding: "80px 0" }}>
-        <H2>A versatile creator focused in</H2>
-        <Accent>Product Design</Accent>
+        <Subtitle>A versatile creator focused in</Subtitle>
+        <Heading2 style={{ color: "#38ff70", textAlign: "center" }}>
+          Product Design
+        </Heading2>
       </div>
       <Wrapper>
         {/* <motion.div style={{ y, opacity }}>
@@ -227,6 +207,7 @@ const Product = () => {
         <TextWrapper>
           {textData.map((item, index) => (
             <div
+              key={index}
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -235,7 +216,6 @@ const Product = () => {
               }}
             >
               <Text
-                key={index}
                 style={{
                   backgroundImage: item.bg,
                   textAlign: item.position,
