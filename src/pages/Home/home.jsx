@@ -3,12 +3,9 @@ import { GlobalCanvas, SmoothScrollbar } from "@14islands/r3f-scroll-rig";
 import { useInView, useAnimation } from "framer-motion";
 
 import Marquee from "../../components/Marquee";
-// import YourComponent from "../../components/projectCard";
-// import Divider from "../../components/Divider";
 import Product from "../../components/productDesign";
 import About from "../../components/sectionAbout";
 import HeroBG from "../../components/heroBG";
-// import { MemojiMyself } from "./homeStyles";
 
 import Pic1 from "../../images/girls_with_phones3x.png";
 import Pic2 from "../../images/man_with_laptop3x.png";
@@ -16,49 +13,21 @@ import Pic3 from "../../images/young_people3x.png";
 import Pic4 from "../../images/young_women_laptop3x.png";
 import AllWork from "../../images/AC_P_Image_trans_1x.png";
 // import MemojiMe from "../../images/Memoji.svg";
-// import ScrollArrow from "../../images/Scroll_Arrow.svg";
 
 import {
   Text,
   TextWrapper,
   ImageWrapper,
   H1,
-  
   P1,
   P2,
   P3,
   P4,
-
   Memoji,
-
 } from "./homeStyles";
 import { FlexColCen } from "../../generalStyles";
 
 const Home = () => {
-  // const cardData = [
-  //   {
-  //     href: "/branding/logos",
-  //     imageSrc: Pic1,
-  //     logoSrc: Pic2,
-  //     heading: "heading",
-  //     description: "this is a description",
-  //   },
-  //   {
-  //     href: "/",
-  //     imageSrc: Pic3,
-  //     logoSrc: Pic2,
-  //     heading: "heading",
-  //     description: "this is a description",
-  //   },
-  //   {
-  //     href: "/",
-  //     imageSrc: Pic4,
-  //     logoSrc: Pic2,
-  //     heading: "heading",
-  //     description: "this is a description",
-  //   },
-  // ];
-
   const textData = [
     { component: H1, text: "Full Stack Designer", duration: 1 },
     { component: P2, text: "Design", duration: 2, delay: 0.5 },
@@ -83,7 +52,6 @@ const Home = () => {
 
   return (
     <FlexColCen ref={ref}>
-      
       <HeroBG>
         <FlexColCen style={{ position: "absolute", zIndex: 10, width: "100%" }}>
           <TextWrapper>
@@ -157,36 +125,18 @@ const Home = () => {
               <Memoji src={Pic4} alt="illustration women in tech" />
               products
             </Marquee>
-
-
-            <div style={{ maxWidth: 1400, width: "100%", margin: "auto", backgroundColor:'red' }}>
-              {/* <ProjectList>
-                <H2>
-                  Most <Accent>recent</Accent> work
-                </H2>
-                <div style={{ width: "80%" }}>
-                  {cardData.map((item, index) => (
-                    <YourComponent
-                      key={index}
-                      href={item.href}
-                      imageSrc={item.imageSrc}
-                      logoSrc={item.logoSrc}
-                      heading={item.heading}
-                      description={item.description}
-                    />
-                  ))}
-                </div>
-                <Divider />
-              </ProjectList> */}
-
-            </div>
           </article>
         )}
       </SmoothScrollbar>
 
       <Product />
-    
-      <img id='work' style={{width: "100%", marginTop:200}} src={AllWork} alt="all work"/>
+
+      <img
+        id="work"
+        style={{ width: "100%", marginTop: 200 }}
+        src={AllWork}
+        alt="all work"
+      />
       <About />
     </FlexColCen>
   );
