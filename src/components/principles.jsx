@@ -5,6 +5,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  position: relative;
   @media ${device.tablet} {
     width: 80%;
     margin: auto;
@@ -58,6 +59,33 @@ const Description = styled.p`
   }
 `;
 
+const GreenBG = styled.span`
+  position: absolute;
+  background: radial-gradient(
+      circle,
+      rgb(114 255 43 / 43%) 0%,
+      rgba(215, 38, 89, 0) 50%
+    )
+    no-repeat;
+  mix-blend-mode: hard-light;
+  width: 120%;
+  height: 50%;
+  bottom: 0;
+`;
+
+const AquaBG = styled.span`
+  position: absolute;
+  background: radial-gradient(
+      circle,
+      rgb(0 255 209 / 62%) 0%,
+      rgba(215, 38, 89, 0) 50%
+    )
+    no-repeat;
+  mix-blend-mode: saturation;
+  width: 130%;
+  height: 100%;
+`;
+
 const Principles = () => {
   const textData = [
     {
@@ -94,6 +122,8 @@ const Principles = () => {
           </div>
         ))}
       </TextWrapper>
+      <GreenBG />
+      <AquaBG />
     </Container>
   );
 };
