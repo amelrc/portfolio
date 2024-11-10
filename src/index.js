@@ -15,7 +15,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./styles.css";
 import App from "./App";
 
-ReactGA.initialize("465678130");
+ReactGA.initialize("G-6T0V71VXFJ");
 
 ReactGA.send({ hitType: "pageview", page: window.location.pathname });
 
