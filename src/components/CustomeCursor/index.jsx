@@ -18,7 +18,7 @@ const AppCursor = styled.div`
     isActive ? "height 0.1s, width 0.1s" : "none"};
   background-color: ${({ isActive }) => (isActive ? "#bd00ff" : "white")};
   display: none;
-  @media ${device.tablet} {
+  @media ${device.mobileL} {
     display: initial;
   }
 `;
@@ -29,6 +29,8 @@ const CustomCursor = () => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
+    if (!ref.current) return;
+
     const handleMouseOver = () => {
       setIsActive(true);
     };
@@ -37,6 +39,7 @@ const CustomCursor = () => {
       setIsActive(false);
     };
 
+    // Throttle function to limit cursor updates for performance
     const throttle = (fn, delay) => {
       let lastTime = 0;
       return function (...args) {
@@ -48,22 +51,43 @@ const CustomCursor = () => {
       };
     };
 
+    // Function to update cursor position
     const handleMouseMove = throttle((event) => {
+      if (!ref.current) return;
       const { clientX, clientY } = event;
       const mouseX = clientX - ref.current.clientWidth / 2;
       const mouseY = clientY - ref.current.clientHeight / 2;
       ref.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
     }, 20);
 
-    const links = document.querySelectorAll("a");
+    // Handle screen resize: Reset cursor position
+    const handleResize = () => {
+      if (ref.current) {
+        ref.current.style.transform = "translate3d(-50%, -50%, 0)";
+      }
+    };
 
+    // Add event listeners
+    const links = document.querySelectorAll("a");
     links.forEach((link) => {
       link.addEventListener("mouseover", handleMouseOver);
       link.addEventListener("mouseleave", handleMouseLeave);
     });
 
     document.addEventListener("mousemove", handleMouseMove);
-  }, [location]);
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup function to remove event listeners when the component unmounts or updates
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("mouseover", handleMouseOver);
+        link.removeEventListener("mouseleave", handleMouseLeave);
+      });
+
+      document.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [location]); // Depend on `location` to update when navigating to a new page
 
   return <AppCursor ref={ref} isActive={isActive} />;
 };
