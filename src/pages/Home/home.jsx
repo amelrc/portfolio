@@ -8,7 +8,7 @@ import Product from "../../components/productDesign";
 import About from "../../components/sectionAbout";
 import HeroBG from "../../components/heroBG";
 import Principles from "../../components/principles";
-import WorkExamples from "../../components/WorkExample";
+
 
 import Pic1 from "../../images/girls_with_phones3x.png";
 import Pic2 from "../../images/man_with_laptop3x.png";
@@ -28,6 +28,7 @@ import {
   Memoji,
 } from "./homeStyles";
 import { FlexColCen } from "../../generalStyles";
+import WorkExamples from "../../components/WorkExample";
 
 const Home = () => {
   const textData = [
