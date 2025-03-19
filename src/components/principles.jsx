@@ -39,7 +39,7 @@ const TextWrapper = styled.div`
   }
 `;
 
-const H3 = styled.h3`
+export const H3 = styled.h3`
   font-family: "SF UI Display Thin";
   color: #49014f;
   font-size: 1.5rem;
@@ -49,13 +49,14 @@ const H3 = styled.h3`
   }
 `;
 
-const Description = styled.p`
+export const Description = styled.p`
   color: #230808;
   font-size: 1rem;
   font-family: SF UI Display Thin;
+  line-height: 125%;
 
   @media ${device.tablet} {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 `;
 

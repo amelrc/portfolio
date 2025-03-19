@@ -87,7 +87,6 @@ const Decoration = styled(motion.img)`
     // }
   }
 `;
-
 const TextWrapper = styled.div`
   // margin: auto;
   // width: 90%;
@@ -116,7 +115,6 @@ const Text = styled(motion.p)`
     font-size: 3rem;
   }
 `;
-
 const Description = styled(motion.p)`
   font-size: 1rem;
 

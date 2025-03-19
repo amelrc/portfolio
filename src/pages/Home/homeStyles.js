@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { device } from "../../generalStyles";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export const TextWrapper = styled(motion.div)`
   display: flex;
@@ -132,3 +133,29 @@ export const ProjectList = styled.section`
   align-items: center;
   margin-top: 40px;
 `;
+
+export const ButtonContainer = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+`;
+
+// make reponsive
+export const CaseButton = styled(Link)`
+  position: sticky;
+  bottom: 10%;
+  text-transform: uppercase;
+  padding: 1.5vw 4rem;
+  border-radius: 1000px;
+  background-color: #38ff6f;
+  color: #36003a;
+  border: solid 2px #36003a;
+  cursor: pointer;
+  font-family: "SF UI Display Light";
+  font-size: 5vh;
+  text-decoration: none;
+`;
+
+export const CloseButton = styled(Link)``;

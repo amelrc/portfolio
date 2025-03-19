@@ -1,17 +1,19 @@
 import React, { useEffect, useRef } from "react";
 import { GlobalCanvas, SmoothScrollbar } from "@14islands/r3f-scroll-rig";
 import { useInView, useAnimation } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 import Marquee from "../../components/Marquee";
 import Product from "../../components/productDesign";
 import About from "../../components/sectionAbout";
 import HeroBG from "../../components/heroBG";
+import Principles from "../../components/principles";
+import WorkExamples from "../../components/WorkExample";
 
 import Pic1 from "../../images/girls_with_phones3x.png";
 import Pic2 from "../../images/man_with_laptop3x.png";
 import Pic3 from "../../images/young_people3x.png";
 import Pic4 from "../../images/young_women_laptop3x.png";
-import AllWork from "../../images/AC_P_Image_trans_1x.png";
 // import MemojiMe from "../../images/Memoji.svg";
 
 import {
@@ -26,7 +28,6 @@ import {
   Memoji,
 } from "./homeStyles";
 import { FlexColCen } from "../../generalStyles";
-import Principles from "../../components/principles";
 
 const Home = () => {
   const textData = [
@@ -44,6 +45,17 @@ const Home = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
+  const location = useLocation();
+
+  useEffect(() => {
+    // Wait for the hash to change and then scroll to the section
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   useEffect(() => {
     if (isInView) {
@@ -132,12 +144,7 @@ const Home = () => {
 
       <Product />
 
-      <img
-        id="work"
-        style={{ width: "100%", marginTop: 200 }}
-        src={AllWork}
-        alt="all work"
-      />
+      <WorkExamples />
 
       <Principles />
 

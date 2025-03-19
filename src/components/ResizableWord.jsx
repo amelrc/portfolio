@@ -19,16 +19,8 @@ const Links = styled(Link)`
   }
 `;
 
-const ResizableWord = ({ style, href, navitem }) => {
+const ResizableWord = ({ style, href, navitem, hash }) => {
   const [word, setWord] = useState(navitem);
-
-  const handleClick = (e) => {
-    e.preventDefault();  // Prevent default anchor behavior
-    const section = document.querySelector(href);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   useLayoutEffect(() => {
     const handleResize = () => {
@@ -43,7 +35,7 @@ const ResizableWord = ({ style, href, navitem }) => {
   }, [word, navitem]);
 
   return (
-    <Links style={style} navitem={word} to={href} onClick={handleClick}>
+    <Links style={style} navitem={word} to={{ pathname: href, hash }}>
       {word}
     </Links>
   );

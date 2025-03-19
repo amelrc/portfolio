@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const size = {
   mobileL: "425px",
@@ -71,5 +72,30 @@ export const Subtitle = styled.p`
   text-align: center;
   @media ${device.tablet} {
     font-size: 2.8rem;
+  }
+`;
+
+//Button
+export const BaseButton = styled(Link)`
+  text-transform: uppercase;
+  padding: 1vw 2rem;
+  border-radius: 1000px;
+  color: #36003a;
+  border: solid 2px #36003a;
+  cursor: pointer;
+  font-family: "SF UI Display Light";
+  font-size: 5vw;
+  text-decoration: none;
+
+  @media ${device.tablet} {
+    padding: 1vw 3rem;
+    font-size: 3vw;
+  }
+  @media ${device.desktop} {
+    padding: 1.5vw 4rem;
+    font-size: 2vw;
+  }
+  &:hover {
+    background-color: #38ff6f;
   }
 `;

@@ -12,6 +12,12 @@ import Home from "./pages/Home/home";
 // import Rubrics from "./pages/rubrics";
 // import Freelance from "./pages/freelance";
 import CustomCursor from "./components/CustomeCursor";
+import AllCases from "./pages/Cases/allCases";
+
+import HeartbeatBelgium from "./pages/Cases/heartbeat";
+
+import TaxApp from "./pages/Cases/taxApp";
+import DesignSystem from "./pages/Cases/designSystem";
 
 const App = () => {
   return (
@@ -24,10 +30,12 @@ const App = () => {
         {/* <Route path="/software/blue-star-planning" element={BSP} />
         <Route path="/freelance" element={Freelance} />
         <Route path="/software/rubrics" element={<Rubrics />} />
-        <Route path="/branding/logos" element={Logos} />
-        <Route path="/work" element={Menu} />
-        <Route path="/about" element={About} />
-        <Route path="/contact" element={Contact} /> */}
+      
+        */}
+        <Route path="/designsystem" element={<DesignSystem />} />
+        <Route path="/taxapp" element={<TaxApp />} />
+        <Route path="/heartbeat" element={<HeartbeatBelgium />} />
+        <Route path="/cases" element={<AllCases />} />
         <Route path="/" element={<Home />} />
       </Routes>
       <NavBot style={{ position: "fixed", bottom: 0, zIndex: 100 }} />

@@ -1,7 +1,9 @@
-import Logo from "../images/Logo.svg";
-import ResizableWord from "./ResizableWord";
+import React from "react";
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
+
+import Logo from "../images/Logo.svg";
+import ResizableWord from "./ResizableWord";
 
 const fadeInAnimation = keyframes`
   from {
@@ -19,9 +21,9 @@ const Nav = styled.nav`
   padding: 16px 0;
   align-items: center;
   width: 100%;
-  opacity: 0;
-  animation: ${fadeInAnimation} 2s ease-in-out forwards;
-  animation-delay: 2s;
+  // opacity: 0;
+  // animation: ${fadeInAnimation} 2s ease-in-out forwards;
+  // animation-delay: 2s;
 `;
 
 const NavTop = ({ style }) => {
@@ -29,31 +31,36 @@ const NavTop = ({ style }) => {
     <Nav style={style}>
       <ResizableWord
         style={{ display: "grid", justifyItems: "end" }}
-        href="#work"
+        href="/"
+        hash="#work"
         navitem={"work"}
       />
-      <Link to="/" style={{gridColumnStart: 2}}>
+      <Link to="/" style={{ gridColumnStart: 2 }}>
         <img src={Logo} alt="Amel Caballero Design Logo" />
       </Link>
       <ResizableWord
         style={{ display: "grid", justifyItems: "start" }}
-        href="#services"
+        href="/"
+        hash="#services"
         navitem={"services"}
       />
     </Nav>
   );
 };
+
 const NavBot = ({ style }) => {
   return (
     <Nav style={style}>
       <ResizableWord
         style={{ display: "grid", justifyItems: "end" }}
-        href="#about"
+        href="/"
+        hash="#about"
         navitem={"about"}
       />
       <ResizableWord
         style={{ gridColumn: 3, display: "grid", justifyItems: "start" }}
-        href="#contact"
+        href="/"
+        hash="#contact"
         navitem={"contact"}
       />
     </Nav>
