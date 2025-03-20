@@ -1,6 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 
 import { H3 } from "./principles";
 import {
@@ -10,18 +8,11 @@ import {
   CaseIntro,
   ProjectButton,
 } from "../pages/Cases/caseStyles";
+import LocationHash from "./locationHash";
 
 const CasePreview = ({ casesData }) => {
-  const location = useLocation();
+  LocationHash();
 
-  useEffect(() => {
-    if (location.hash) {
-      const element = document.querySelector(location.hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }
-  }, [location]);
   return (
     <CaseContainer>
       {casesData.map((item, index) => (

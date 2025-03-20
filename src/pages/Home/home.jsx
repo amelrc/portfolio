@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { GlobalCanvas, SmoothScrollbar } from "@14islands/r3f-scroll-rig";
 import { useInView, useAnimation } from "framer-motion";
-import { useLocation } from "react-router-dom";
 
 import Marquee from "../../components/Marquee";
 import Product from "../../components/productDesign";
@@ -28,22 +27,14 @@ import {
 } from "./homeStyles";
 import { FlexColCen } from "../../generalStyles";
 import WorkExamples from "../../components/WorkExample";
+import LocationHash from "../../components/locationHash";
 
 const Home = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
-  const location = useLocation();
 
-  useEffect(() => {
-    // Wait for the hash to change and then scroll to the section
-    if (location.hash) {
-      const element = document.querySelector(location.hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [location]);
+  LocationHash();
 
   useEffect(() => {
     if (isInView) {
