@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
-import { device } from "../generalStyles";
+import { device } from "../../generalStyles";
 import { motion } from "framer-motion";
 
-import Me from "../images/Myself_circle.png";
+import Me from "../../images/Myself_circle.png";
 import { Link } from "react-router-dom";
 
 const Wrapper = styled(motion.div)`
@@ -102,8 +102,8 @@ const TextColab = styled.p`
 
 const Input = styled.input`
   font-family: SF UI Display Thin;
-   font-size: 1rem;
-  margin-left: 4px ;
+  font-size: 1rem;
+  margin-left: 4px;
   background: transparent;
   color: #ff3b6d;
   border: none;
@@ -116,7 +116,7 @@ const Input = styled.input`
   &:hover {
     color: #fdfde5;
   }
- @media ${device.tablet} {
+  @media ${device.tablet} {
     font-size: 1.5rem;
   }
 `;
@@ -132,7 +132,7 @@ const ContactWrapper = styled.div`
   align-items: center;
   position: relative;
   flex-wrap: wrap;
-    text-align: start;
+  text-align: start;
   color: #d3cfc0;
   font-size: 1rem;
   font-family: SF UI Display Thin;
@@ -157,14 +157,10 @@ const About = () => {
     document.execCommand(copied);
   };
 
-
-
-
-
   return (
     <Wrapper>
       <Container>
-        <div id='about' style={{ width: "55%", margin: "16% 16% 8% 16%" }}>
+        <div id="about" style={{ width: "55%", margin: "16% 16% 8% 16%" }}>
           <H3>a bit about me</H3>
           <PText>
             Love creating captivating digital experiences that can change
@@ -173,9 +169,31 @@ const About = () => {
             in awe.
           </PText>
           {/* <Button to="/about"> ...and bit more</Button> */}
+          {/* <p style={{ fontWeight: "bold" }}>
+            Hi, I’m Amel – a multi-talented individual with over 10+ years of
+            experiences in wide range of disciplines.
+          </p>
+          <p>
+            From fine arts to design to programming, I've traversed from
+            sculpture and painting, to graphic design, UI and UX, to developing
+            software and web applications. Apart from being a multi-disciplinary
+            creator, I'm an advisor, entrepreneur, and front-end developer with
+            interests in sea life protection, travelling, and much more.
+          </p>
+          <p>
+            I don’t like to define myself by the work I’ve done. I define myself
+            by the work I want to do. I have a desire to learn continuously
+            through new challenges and do interesting things that matter.
+          </p>
+          <p>
+            Fuelled by the good in people, I’m easily inspired, passionate and
+            expressive with a natural ability to entertain and motivate. I’m
+            never satisfied with ideas alone, instead I have an impulsive need
+            to act on them.
+          </p> */}
         </div>
         <Image src={Me} alt="portrait of myself" />
-        <TextWrapper id='contact'>
+        <TextWrapper id="contact">
           <H4>Let's collaborate</H4>
           <TextColab>
             I'm always looking to collaborate on interesting and innovative
@@ -183,43 +201,26 @@ const About = () => {
             building a design system or rethinking the entire shablam.
             <br />
             <br />
-            
-
-
-
-
-
-      
             <ContactWrapper>
+              <p style={{ color: "#d3cfc0" }}>
+                Find me on{" "}
+                <Link
+                  style={{ color: "inherit" }}
+                  to="https://www.linkedin.com/in/amel-caballero-design/"
+                >
+                  LinkedIn
+                </Link>{" "}
+                or{" "}
+              </p>
+              {copied && <Span>Copied to clipboard</Span>}
 
-            <p style={{color:'#d3cfc0'}} >Find me on{" "}
-            <Link
-              style={{ color: "inherit" }}
-              to="https://www.linkedin.com/in/amel-caballero-design/"
-            >
-              LinkedIn
-            </Link>
-           
-
-            {" "}or{" "}
-
-          
-          </p>
-          {copied && <Span>Copied to clipboard</Span>}
-
-          <Input
-            readOnly
-            ref={textAreaRef}
-            value="amelrc@gmail.com"
-            onClick={copyToClipboard}
-            />
-      
-        </ContactWrapper>
- 
-
-
-
-
+              <Input
+                readOnly
+                ref={textAreaRef}
+                value="amelrc@gmail.com"
+                onClick={copyToClipboard}
+              />
+            </ContactWrapper>
           </TextColab>
         </TextWrapper>
       </Container>

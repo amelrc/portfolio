@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
 const size = {
@@ -17,6 +17,17 @@ export const device = {
   desktop: `(min-width: ${size.desktop})`,
 };
 export default device;
+
+// Fonts 3.2025
+export const T_SF_Thin = css`
+  font-family: "SF UI Display Thin";
+`;
+export const T_SF_Bold = css`
+  font-family: "SF UI Display Bold";
+`;
+export const T_Rox_Bold = css`
+  font-family: "Roxborough Bold";
+`;
 
 export const FlexColCen = styled.div`
   display: flex;

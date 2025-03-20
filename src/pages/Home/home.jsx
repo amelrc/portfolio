@@ -5,10 +5,9 @@ import { useLocation } from "react-router-dom";
 
 import Marquee from "../../components/Marquee";
 import Product from "../../components/productDesign";
-import About from "../../components/sectionAbout";
+import About from "../../components/About/sectionAbout";
 import HeroBG from "../../components/heroBG";
 import Principles from "../../components/principles";
-
 
 import Pic1 from "../../images/girls_with_phones3x.png";
 import Pic2 from "../../images/man_with_laptop3x.png";
@@ -18,31 +17,19 @@ import Pic4 from "../../images/young_women_laptop3x.png";
 
 import {
   Text,
-  TextWrapper,
   ImageWrapper,
-  H1,
-  P1,
-  P2,
-  P3,
-  P4,
   Memoji,
+  HeroTextContainer,
+  FSD,
+  Design,
+  That,
+  Works,
+  ForYou,
 } from "./homeStyles";
 import { FlexColCen } from "../../generalStyles";
 import WorkExamples from "../../components/WorkExample";
 
 const Home = () => {
-  const textData = [
-    { component: H1, text: "Full Stack Designer", duration: 1 },
-    { component: P2, text: "Design", duration: 2, delay: 0.5 },
-    { component: P3, text: "that", duration: 2.5, delay: 0.6 },
-    { component: P4, text: "WORKS", duration: 2.8, delay: 0.7 },
-    { component: P1, text: "(for you & them)", duration: 2, delay: 0.8 },
-  ];
-  const itemVariants = {
-    s: { opacity: 0, y: 40 },
-    e: { opacity: 1, y: 0 },
-  };
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -66,39 +53,24 @@ const Home = () => {
 
   return (
     <FlexColCen ref={ref}>
-      <HeroBG>
-        <FlexColCen style={{ position: "absolute", zIndex: 10, width: "100%" }}>
-          <TextWrapper>
-            {textData.map((item, index) => {
-              const { component: Component, text, duration, delay } = item;
-              return (
-                <Component
-                  key={index}
-                  variants={itemVariants}
-                  initial="s"
-                  animate={mainControls}
-                  transition={{ duration, delay }}
-                >
-                  {text}
-                </Component>
-              );
-            })}
-          </TextWrapper>
+      <div style={{ position: "absolute", zIndex: 10, width: "100%" }}>
+        <HeroTextContainer>
+          <FSD>full stack designer</FSD>
+          <Design>Design</Design>
+          <That>that</That>
+          <Works>works</Works>
+          <ForYou>(for you & them)</ForYou>
           <ImageWrapper>
             {/* <MemojiMyself src={MemojiMe} alt="memoji of myself" /> */}
-            <Text
-              variants={itemVariants}
-              initial="s"
-              animate={mainControls}
-              transition={{ duration: 3, delay: 2 }}
-            >
+            <Text>
               Based in The Netherlands but working worldwide. Partnering with
               local and international clients that value users just as much as I
               do.
             </Text>
           </ImageWrapper>
-        </FlexColCen>
-      </HeroBG>
+        </HeroTextContainer>
+      </div>
+      <HeroBG></HeroBG>
 
       {/* <img src={ScrollArrow} alt="arrow indicating to scroll down" /> */}
 

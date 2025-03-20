@@ -1,32 +1,19 @@
-import styled from "styled-components";
-import { device } from "../../generalStyles";
+import styled, { css, keyframes } from "styled-components";
+import { device, T_Rox_Bold, T_SF_Bold, T_SF_Thin } from "../../generalStyles";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-export const TextWrapper = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 100px 0 40px;
+// export const TextWrapper = styled(motion.div)`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   padding: 100px 0 40px;
 
-  @media ${device.tablet} {
-    margin-top: 80px;
-    padding: 60px 0 40px;
-  }
-`;
-
-export const ImageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media ${device.tablet} {
-    flex-direction: row-reverse;
-    width: 60%;
-    justify-content: space-between;
-    margin: -56px auto;
-  }
-`;
+//   @media ${device.tablet} {
+//     margin-top: 80px;
+//     padding: 60px 0 40px;
+//   }
+// `;
 
 export const H1 = styled(motion.h1)`
   font-family: "SF UI Display Bold";
@@ -45,6 +32,128 @@ export const H2 = styled.h2`
 
   @media ${device.tablet} {
     font-size: 5vw;
+  }
+`;
+
+// Staggered animation 3.2025
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+// Wrapper to apply stagger effect using nth-child
+export const HeroTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  // gap: 10px;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 160px 0px 40px;
+
+  & > * {
+    opacity: 0; /* Initially hidden */
+    animation: ${fadeIn} 0.6s ease-out forwards;
+  }
+
+  & > *:nth-child(1) {
+    animation-delay: 0s;
+  }
+  & > *:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  & > *:nth-child(3) {
+    animation-delay: 0.6s;
+    animation-duration: 1s;
+  }
+  & > *:nth-child(4) {
+    animation-delay: 0.9s;
+    animation-duration: 1.4s;
+  }
+  & > *:nth-child(5) {
+    animation-delay: 0.9s;
+    animation-duration: 1.4s;
+  }
+  & > *:nth-child(6) {
+    animation-delay: 1.4s;
+    animation-duration: 1.8s;
+  }
+`;
+
+export const HeroTextAnimation = css`
+  opacity: 0;
+  animation: ${fadeIn} 0.6s ease-out forwards;
+`;
+
+export const FSD = styled.h1`
+  ${T_SF_Bold}
+  font-size: 1.6rem;
+  text-transform: capitalize;
+`;
+
+export const Design = styled.p`
+  ${T_Rox_Bold}
+  font-size: 5rem;
+  color: #ed00ff;
+  padding-top: 8%;
+  @media ${device.laptop} {
+    font-size: 6rem;
+  }
+`;
+
+export const That = styled.p`
+  ${T_SF_Bold}
+  font-size: 5rem;
+  mix-blend-mode: hard-light;
+  color: transparent;
+  -webkit-text-stroke: 1px #36003a;
+  @media ${device.laptop} {
+    font-size: 6rem;
+  }
+`;
+
+export const Works = styled.p`
+  ${T_SF_Bold}
+  font-size: 5rem;
+  text-transform: uppercase;
+  @media ${device.laptop} {
+    font-size: 6rem;
+  }
+`;
+
+export const ForYou = styled.p`
+  ${T_SF_Thin}
+  font-size: 2rem;
+`;
+
+export const ImageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media ${device.tablet} {
+    flex-direction: row-reverse;
+    width: 80%;
+  }
+`;
+
+export const Text = styled.p`
+  ${T_SF_Thin}
+  font-size: 1.1rem;
+  text-align: center;
+  width: 80%;
+  padding-top: 96px;
+
+  @media ${device.tablet} {
+    width: 40%;
+    text-align: start;
   }
 `;
 
@@ -109,21 +218,6 @@ export const Memoji = styled.img`
   }
   @media ${device.laptop} {
     height: 18vh;
-  }
-`;
-
-export const Text = styled(motion.p)`
-  font-family: "SF UI Display Thin";
-  font-size: 1.1rem;
-  text-align: center;
-  width: 80%;
-  margin-bottom: 100px;
-  font-weight: 600;
-
-  @media ${device.tablet} {
-    width: 40%;
-    text-align: start;
-    margin-top: 100px;
   }
 `;
 

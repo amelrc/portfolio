@@ -1,18 +1,9 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import Logo from "../images/Logo.svg";
 import ResizableWord from "./ResizableWord";
-
-const fadeInAnimation = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
 
 const Nav = styled.nav`
   display: grid;
@@ -21,9 +12,6 @@ const Nav = styled.nav`
   padding: 16px 0;
   align-items: center;
   width: 100%;
-  // opacity: 0;
-  // animation: ${fadeInAnimation} 2s ease-in-out forwards;
-  // animation-delay: 2s;
 `;
 
 const NavTop = ({ style }) => {

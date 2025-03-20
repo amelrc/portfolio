@@ -14,7 +14,6 @@ const Links = styled(Link)`
   color: white;
 
   &: hover {
-    // -webkit-text-stroke: 1.6px #38ff70;
     color: #38ff70;
   }
 `;
