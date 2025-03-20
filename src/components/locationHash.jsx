@@ -4,6 +4,8 @@ import { useLocation } from "react-router-dom";
 const LocationHash = () => {
   const location = useLocation();
 
+  console.log(location);
+
   useEffect(() => {
     const handleHashScroll = () => {
       if (location.hash || window.location.hash) {
