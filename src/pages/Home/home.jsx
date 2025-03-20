@@ -34,8 +34,6 @@ const Home = () => {
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
 
-  LocationHash();
-
   useEffect(() => {
     if (isInView) {
       mainControls.start("e");
@@ -43,77 +41,87 @@ const Home = () => {
   }, [isInView, mainControls]);
 
   return (
-    <FlexColCen ref={ref}>
-      <div style={{ position: "absolute", zIndex: 10, width: "100%" }}>
-        <HeroTextContainer>
-          <FSD>full stack designer</FSD>
-          <Design>Design</Design>
-          <That>that</That>
-          <Works>works</Works>
-          <ForYou>(for you & them)</ForYou>
-          <ImageWrapper>
-            {/* <MemojiMyself src={MemojiMe} alt="memoji of myself" /> */}
-            <Text>
-              Based in The Netherlands but working worldwide. Partnering with
-              local and international clients that value users just as much as I
-              do.
-            </Text>
-          </ImageWrapper>
-        </HeroTextContainer>
-      </div>
-      <HeroBG></HeroBG>
+    <>
+      <LocationHash />
+      <FlexColCen ref={ref}>
+        <div style={{ position: "absolute", zIndex: 10, width: "100%" }}>
+          <HeroTextContainer>
+            <FSD>full stack designer</FSD>
+            <Design>Design</Design>
+            <That>that</That>
+            <Works>works</Works>
+            <ForYou>(for you & them)</ForYou>
+            <ImageWrapper>
+              {/* <MemojiMyself src={MemojiMe} alt="memoji of myself" /> */}
+              <Text>
+                Based in The Netherlands but working worldwide. Partnering with
+                local and international clients that value users just as much as
+                I do.
+              </Text>
+            </ImageWrapper>
+          </HeroTextContainer>
+        </div>
+        <HeroBG></HeroBG>
 
-      {/* <img src={ScrollArrow} alt="arrow indicating to scroll down" /> */}
+        {/* <img src={ScrollArrow} alt="arrow indicating to scroll down" /> */}
 
-      <GlobalCanvas style={{ zIndex: -1 }}>
-        <ambientLight />
-      </GlobalCanvas>
-      <SmoothScrollbar>
-        {(bind) => (
-          <article
-            style={{ width: "100vw", display: "flex", flexDirection: "column" }}
-            {...bind}
-          >
-            <Marquee
+        <GlobalCanvas style={{ zIndex: -1 }}>
+          <ambientLight />
+        </GlobalCanvas>
+        <SmoothScrollbar>
+          {(bind) => (
+            <article
               style={{
-                fontFamily: "Roxborough Thin",
-                overflow: "hidden",
-                background: "#e9f2ff",
-                color: "#bd00ff",
-                zIndex: 1,
+                width: "100vw",
+                display: "flex",
+                flexDirection: "column",
               }}
+              {...bind}
             >
-              <Memoji src={Pic1} alt="illustration people talking" /> user
-              <Memoji src={Pic2} alt="illustration gay man with laptop = me" />
-              centric
-            </Marquee>
+              <Marquee
+                style={{
+                  fontFamily: "Roxborough Thin",
+                  overflow: "hidden",
+                  background: "#e9f2ff",
+                  color: "#bd00ff",
+                  zIndex: 1,
+                }}
+              >
+                <Memoji src={Pic1} alt="illustration people talking" /> user
+                <Memoji
+                  src={Pic2}
+                  alt="illustration gay man with laptop = me"
+                />
+                centric
+              </Marquee>
 
-            <Marquee
-              reverse="true"
-              // uppercase
-              style={{
-                fontFamily: "SF UI Display Thin",
-                overflow: "hidden",
-                background: "#36003A",
-                color: "white",
-              }}
-            >
-              <Memoji src={Pic3} alt="illustration people together" /> digital
-              <Memoji src={Pic4} alt="illustration women in tech" />
-              products
-            </Marquee>
-          </article>
-        )}
-      </SmoothScrollbar>
+              <Marquee
+                reverse="true"
+                // uppercase
+                style={{
+                  fontFamily: "SF UI Display Thin",
+                  overflow: "hidden",
+                  background: "#36003A",
+                  color: "white",
+                }}
+              >
+                <Memoji src={Pic3} alt="illustration people together" /> digital
+                <Memoji src={Pic4} alt="illustration women in tech" />
+                products
+              </Marquee>
+            </article>
+          )}
+        </SmoothScrollbar>
 
-      <Product />
+        <Product />
 
-      <WorkExamples />
+        <WorkExamples />
 
-      <Principles />
+        <Principles />
 
-      <About />
-    </FlexColCen>
+        <About />
+      </FlexColCen>
+    </>
   );
 };
 
