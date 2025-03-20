@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { device, T_SF_Thin } from "../../generalStyles";
-import { motion } from "framer-motion";
 
-export const Wrapper = styled(motion.div)`
+export const Wrapper = styled.div`
   background: linear-gradient(180deg, #180521 0%, #290b38 100%);
   margin-top: 8%;
   display: flex;
@@ -57,16 +56,6 @@ export const Accent = styled.span`
   -webkit-text-fill-color: transparent;
   padding-left: 8px;
 `;
-
-// export const Button = styled(Link)`
-//   color: #316fff;
-//   font-size: 1rem;
-//   font-family: SF UI Display Thin;
-
-//   @media ${device.tablet} {
-//     font-size: 1.5rem;
-//   }
-// `;
 
 export const Image = styled.img`
   width: 50%;
