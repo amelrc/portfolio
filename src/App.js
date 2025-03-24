@@ -8,6 +8,7 @@ import TaxApp from "./pages/Cases/taxApp";
 import DesignSystem from "./pages/Cases/designSystem";
 
 import CustomCursor from "./components/CustomeCursor";
+import NotFound from "./pages/notFound";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/heartbeat" element={<HeartbeatBelgium />} />
         <Route path="/cases" element={<AllCases />} />
         <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <NavBot style={{ position: "fixed", bottom: 0, zIndex: 100 }} />
