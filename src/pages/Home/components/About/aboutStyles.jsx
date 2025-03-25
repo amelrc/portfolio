@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device, T_SF_Thin } from "../../generalStyles";
+import { device, T_SF_Thin } from "../../../../generalStyles";
 
 export const Wrapper = styled.div`
   background: linear-gradient(180deg, #180521 0%, #290b38 100%);

@@ -11,7 +11,7 @@ import {
   CaseContainer,
 } from "./caseStyles";
 import Cross from "../../images/cross.png";
-import { H3 } from "../../components/principles";
+import { H3 } from "../Home/components/principles";
 
 const DesignSystem = () => {
   const location = useLocation();

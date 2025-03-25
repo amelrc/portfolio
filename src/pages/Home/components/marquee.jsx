@@ -2,7 +2,7 @@ import { useRef } from "react";
 import styled, { keyframes } from "styled-components";
 import { motion, useTransform } from "framer-motion";
 import { useTracker } from "@14islands/r3f-scroll-rig";
-import { useTrackerMotionValue } from "./useTrackerMotionValue.js";
+import { useTrackerMotionValue } from "../../../components/useTrackerMotionValue.js";
 
 const scroll = keyframes`
   from {

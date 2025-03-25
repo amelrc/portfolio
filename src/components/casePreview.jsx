@@ -1,6 +1,6 @@
 import React from "react";
 
-import { H3 } from "./principles";
+import { H3 } from "../pages/Home/components/principles";
 import {
   CaseContainer,
   CaseDescription,

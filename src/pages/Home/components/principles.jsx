@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device, Heading2, Subtitle } from "../generalStyles";
+import { device, Heading2, Subtitle } from "../../../generalStyles";
 
 const Container = styled.div`
   display: flex;

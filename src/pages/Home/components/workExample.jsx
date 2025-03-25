@@ -1,14 +1,17 @@
 import { useState, useEffect, useRef } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
-import { ButtonContainer } from "../pages/Home/homeStyles";
+import { ButtonContainer } from "../homeStyles";
 
-import AllWork from "../images/AC_P_Image_trans_1x.png";
-import { BaseButton } from "../generalStyles";
+import AllWork from "../../../images/AC_P_Image_trans_1x.webp";
+import { BaseButton } from "../../../generalStyles";
 
 const WorkExamples = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const targetRef = useRef(null); // Reference to the target element
+  const targetRef = useRef(null);
 
+  // Show button on scroll
   useEffect(() => {
     const handleScroll = () => {
       if (targetRef.current) {
@@ -26,10 +29,12 @@ const WorkExamples = () => {
   return (
     <div>
       <ButtonContainer ref={targetRef}>
-        <img
+        <LazyLoadImage
           id="work"
-          style={{ width: "100%", marginTop: 200 }}
+          style={{ marginTop: 200 }}
           src={AllWork}
+          width={"100%"}
+          effect="blur"
           alt="all work"
         />
 

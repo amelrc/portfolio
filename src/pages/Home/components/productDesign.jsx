@@ -1,12 +1,12 @@
 import React, { useRef, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import { device, Heading2, Subtitle } from "../generalStyles";
+import { device, Heading2, Subtitle } from "../../../generalStyles";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useScrollbar, useTracker } from "@14islands/r3f-scroll-rig";
-import Grid from "../images/Grid_large.svg";
-import Cone from "../images/cone.svg";
-import Disk from "../images/disk.svg";
-import Twirl from "../images/curved_shape.svg";
+import Grid from "../../../images/Grid_large.svg";
+import Cone from "../../../images/cone.svg";
+import Disk from "../../../images/disk.svg";
+import Twirl from "../../../images/curved_shape.svg";
 
 const Wrapper = styled(motion.div)`
   background-image: url(${Grid});

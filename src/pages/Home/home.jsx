@@ -2,11 +2,11 @@ import React, { useEffect, useRef } from "react";
 import { GlobalCanvas, SmoothScrollbar } from "@14islands/r3f-scroll-rig";
 import { useInView, useAnimation } from "framer-motion";
 
-import Marquee from "../../components/Marquee";
-import Product from "../../components/productDesign";
-import About from "../../components/About/sectionAbout";
-import HeroBG from "../../components/heroBG";
-import Principles from "../../components/principles";
+import Marquee from "./components/marquee";
+import Product from "../Home/components/productDesign";
+import About from "./components/About/sectionAbout";
+import HeroBG from "./components/heroBG";
+import Principles from "./components/principles";
 
 import Pic1 from "../../images/girls_with_phones3x.png";
 import Pic2 from "../../images/man_with_laptop3x.png";
@@ -26,7 +26,7 @@ import {
   ForYou,
 } from "./homeStyles";
 import { FlexColCen } from "../../generalStyles";
-import WorkExamples from "../../components/WorkExample";
+import WorkExamples from "./components/workExample";
 import LocationHash from "../../components/locationHash";
 
 const Home = () => {

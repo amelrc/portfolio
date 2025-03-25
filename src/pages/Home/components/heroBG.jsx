@@ -3,13 +3,20 @@ import styled, { css, keyframes } from "styled-components";
 
 const moveInCircle = keyframes`
   0% {
-    // transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    // transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 `;
-
+const HeroContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+`;
 const BlurFilter = css`
   filter: url(#goo) blur(40px);
 `;
@@ -32,7 +39,7 @@ const OuterRed = styled.div`
   width: 80%;
   height: 80%;
   transform-origin: 50% -400px;
-  //   animation: ${moveInCircle} 20s linear 2 reverse;
+  animation: ${moveInCircle} 20s linear 2 reverse;
 `;
 
 const Center = styled.div`
@@ -61,12 +68,12 @@ const OuterBlue = styled.div`
   top: 20%;
   left: 20%;
   transform-origin: 50% -200px;
-  //   animation: ${moveInCircle} 20s linear 10;
+  animation: ${moveInCircle} 20s linear 10;
 `;
 
-const PrinciplesBG = ({ children }) => {
+const HeroBG = ({ children }) => {
   return (
-    <div className="gradient-bg">
+    <HeroContainer>
       {children}
       <svg xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -88,8 +95,8 @@ const PrinciplesBG = ({ children }) => {
         <Center />
         <OuterBlue />
       </GradientContainer>
-    </div>
+    </HeroContainer>
   );
 };
 
-export default PrinciplesBG;
+export default HeroBG;
