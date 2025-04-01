@@ -27,13 +27,14 @@ const WorkExamples = () => {
   }, []);
 
   return (
-    <div>
+    <div id="work">
       <ButtonContainer ref={targetRef}>
         <LazyLoadImage
           id="work"
           style={{ marginTop: 200 }}
           src={AllWork}
-          width={"100%"}
+          width="100%"
+          height="auto"
           effect="blur"
           alt="all work"
         />

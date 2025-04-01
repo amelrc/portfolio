@@ -3,18 +3,7 @@ import { device, T_Rox_Bold, T_SF_Bold, T_SF_Thin } from "../../generalStyles";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-// export const TextWrapper = styled(motion.div)`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   padding: 100px 0 40px;
-
-//   @media ${device.tablet} {
-//     margin-top: 80px;
-//     padding: 60px 0 40px;
-//   }
-// `;
-
+// used in 404
 export const H1 = styled(motion.h1)`
   font-family: "SF UI Display Bold";
   font-weight: 600;
@@ -23,7 +12,7 @@ export const H1 = styled(motion.h1)`
   text-align: center;
   color: #36003a;
 `;
-
+// used in All Cases (Work)
 export const H2 = styled.h2`
   font-family: "SF UI Display Thin";
   color: #49014f;
@@ -35,8 +24,7 @@ export const H2 = styled.h2`
   }
 `;
 
-// Staggered animation 3.2025
-
+// Staggered animation Mar 2025
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -144,7 +132,7 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-export const Text = styled.p`
+export const IntoText = styled.p`
   ${T_SF_Thin}
   font-size: 1.1rem;
   text-align: center;
@@ -157,6 +145,7 @@ export const Text = styled.p`
   }
 `;
 
+// used in 404
 export const P1 = styled(motion.p)`
   font-family: "SF UI Display Thin";
   font-weight: 200;
@@ -167,39 +156,39 @@ export const P1 = styled(motion.p)`
   }
 `;
 
-export const P2 = styled(motion.p)`
-  color: #ed00ff;
-  font-family: "Roxborough Bold";
-  font-size: 4.5rem;
-  text-align: center;
-  @media ${device.tablet} {
-    font-size: 7vw;
-  }
-`;
+// export const P2 = styled(motion.p)`
+//   color: #ed00ff;
+//   font-family: "Roxborough Bold";
+//   font-size: 4.5rem;
+//   text-align: center;
+//   @media ${device.tablet} {
+//     font-size: 7vw;
+//   }
+// `;
 
-export const P3 = styled(motion.p)`
-  font-family: "SF UI Display Bold";
-  line-height: normal;
-  font-size: 5rem;
+// export const P3 = styled(motion.p)`
+//   font-family: "SF UI Display Bold";
+//   line-height: normal;
+//   font-size: 5rem;
 
-  mix-blend-mode: hard-light;
-  color: transparent;
-  -webkit-text-stroke: 1px #36003a;
-  text-align: center;
-  @media ${device.tablet} {
-    font-size: 6vw;
-  }
-`;
+//   mix-blend-mode: hard-light;
+//   color: transparent;
+//   -webkit-text-stroke: 1px #36003a;
+//   text-align: center;
+//   @media ${device.tablet} {
+//     font-size: 6vw;
+//   }
+// `;
 
-export const P4 = styled(motion.p)`
-  font-family: "SF UI Display Bold";
-  font-weight: 600;
-  font-size: 4.5rem;
-  text-align: center;
-  @media ${device.tablet} {
-    font-size: 7vw;
-  }
-`;
+// export const P4 = styled(motion.p)`
+//   font-family: "SF UI Display Bold";
+//   font-weight: 600;
+//   font-size: 4.5rem;
+//   text-align: center;
+//   @media ${device.tablet} {
+//     font-size: 7vw;
+//   }
+// `;
 
 export const MemojiMyself = styled.img`
   width: 200px;
@@ -221,12 +210,12 @@ export const Memoji = styled.img`
   }
 `;
 
-export const ProjectList = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
-`;
+// export const ProjectList = styled.section`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin-top: 40px;
+// `;
 
 export const ButtonContainer = styled.div`
   position: relative;

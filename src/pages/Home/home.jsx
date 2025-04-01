@@ -15,7 +15,6 @@ import Pic4 from "../../images/young_women_laptop3x.png";
 // import MemojiMe from "../../images/Memoji.svg";
 
 import {
-  Text,
   ImageWrapper,
   Memoji,
   HeroTextContainer,
@@ -24,6 +23,7 @@ import {
   That,
   Works,
   ForYou,
+  IntoText,
 } from "./homeStyles";
 import { FlexColCen } from "../../generalStyles";
 import WorkExamples from "./components/workExample";
@@ -53,11 +53,11 @@ const Home = () => {
             <ForYou>(for you & them)</ForYou>
             <ImageWrapper>
               {/* <MemojiMyself src={MemojiMe} alt="memoji of myself" /> */}
-              <Text>
+              <IntoText>
                 Based in The Netherlands but working worldwide. Partnering with
                 local and international clients that value users just as much as
                 I do.
-              </Text>
+              </IntoText>
             </ImageWrapper>
           </HeroTextContainer>
         </div>
