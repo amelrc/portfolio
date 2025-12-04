@@ -9,33 +9,126 @@
 
     <meta
       name="description"
-      content="Portfolio of Amel Caballero, a UX//UI/Product Designer."
+      content="Portfolio of Amel Caballero, a UX/UI/Product Designer. We will be back soon!"
     />
 
     <!-- Open Graph (OG) meta tags for social media sharing -->
     <meta property="og:title" content="Amel Caballero" />
     <meta
       property="og:description"
-      content="Explore my portfolio showcasing UX and Product Design projects."
+      content="Our website is being refreshed. We will be back soon!"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://amelcaballero.com" />
 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        background-color: #f5f5f5;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        text-align: center;
+        max-width: 600px;
+      }
+
+      .logo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 40px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .message {
+        font-size: 1.1rem;
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 40px;
+      }
+
+      .contact {
+        font-size: 1rem;
+        color: #333;
+      }
+
+      .contact a {
+        color: #333;
+        text-decoration: none;
+        border-bottom: 1px solid #333;
+        transition: opacity 0.2s ease;
+      }
+
+      .contact a:hover {
+        opacity: 0.7;
+      }
+
+      .business-info {
+        margin-top: 60px;
+        font-size: 0.85rem;
+        color: #888;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        .message {
+          font-size: 1rem;
+        }
+
+        .logo {
+          width: 100px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div class="container">
+      <svg class="logo" viewBox="0 0 78 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M27.2011 15.4925L37.2086 32.6077L27.1099 26.8848L17.0988 9.76952L27.2011 15.4925Z" fill="white" stroke="#333333" stroke-width="1.69649" stroke-linejoin="round"/>
+        <path d="M27.201 15.4925L17.0987 44L7 38.277L17.0987 9.76952L27.201 15.4925Z" fill="white" stroke="#333333" stroke-width="1.69649" stroke-linejoin="round"/>
+        <path d="M40.5857 9.72298V32.5111L50.7646 26.7416L50.6844 4L40.5857 9.72298Z" fill="white" stroke="#333333" stroke-width="1.69649" stroke-linejoin="round"/>
+        <path d="M60.8633 44L71.0458 38.2341L50.7646 26.7416L40.5857 32.5111L60.8633 44Z" fill="white" stroke="#333333" stroke-width="1.69649" stroke-linejoin="round"/>
+        <path d="M60.8633 21.2119L70.9656 15.4925L50.6844 4L40.5857 9.72298L60.8633 21.2119Z" fill="white" stroke="#333333" stroke-width="1.69649" stroke-linejoin="round"/>
+      </svg>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+      <h1>We'll Be Back Soon</h1>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+      <p class="message">
+        Our website is being refreshed with something new and exciting.<br>
+        Stay tuned!
+      </p>
+
+      <p class="contact">
+        Reach out to us at <a href="mailto:info@amelcaballero.com">info@amelcaballero.com</a>
+      </p>
+
+      <p class="business-info">
+        Amel Caballero BV<br>
+        KVK: 92282091
+      </p>
+    </div>
   </body>
 </html>
