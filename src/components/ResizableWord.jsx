@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Links = styled(Link)`
   text-decoration: none;
   width: 100%;
-  font-family: "SF UI Display Bold";
+  font-family: "Manrope", sans-serif;
   color: transparent;
   text-align: center;
   text-transform: uppercase;

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 // used in 404
 export const H1 = styled(motion.h1)`
-  font-family: "SF UI Display Bold";
+  font-family: "Manrope", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 5rem;
@@ -14,7 +14,7 @@ export const H1 = styled(motion.h1)`
 `;
 // used in All Cases (Work)
 export const H2 = styled.h2`
-  font-family: "SF UI Display Thin";
+  font-family: "Manrope", sans-serif;
   color: #49014f;
   font-size: 2.5rem;
   margin: 8% 0;
@@ -147,7 +147,7 @@ export const IntoText = styled.p`
 
 // used in 404
 export const P1 = styled(motion.p)`
-  font-family: "SF UI Display Thin";
+  font-family: "Manrope", sans-serif;
   font-weight: 200;
   font-size: 2rem;
   text-align: center;
@@ -236,7 +236,7 @@ export const CaseButton = styled(Link)`
   color: #36003a;
   border: solid 2px #36003a;
   cursor: pointer;
-  font-family: "SF UI Display Light";
+  font-family: "Manrope", sans-serif;
   font-size: 5vh;
   text-decoration: none;
 `;

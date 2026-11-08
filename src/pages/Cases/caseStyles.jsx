@@ -30,7 +30,7 @@ export const CaseIntro = styled.div`
 export const CaseDescription = styled.p`
   color: #230808;
   font-size: 1rem;
-  font-family: SF UI Display Thin;
+  font-family: "Manrope", sans-serif;
   line-height: 125%;
   margin-bottom: 4%;
 
@@ -54,7 +54,7 @@ export const ProjectButton = styled(Link)`
   color: #36003a;
   border: solid 1px #36003a;
   cursor: pointer;
-  font-family: "SF UI Display Light";
+  font-family: "Manrope", sans-serif;
   font-size: 3.4vw;
   text-decoration: none;
 
@@ -105,7 +105,7 @@ export const CloseIcon = styled.img`
 `;
 
 export const CaseTitle = styled.h1`
-  font-family: "SF UI Display Thin";
+  font-family: "Manrope", sans-serif;
   color: #49014f;
   font-size: 2.5rem;
   margin: 10% 0 0 0;
@@ -117,7 +117,7 @@ export const CaseTitle = styled.h1`
 
 export const CaseSubTitle = styled.p`
   color: #bd00ff;
-  font-family: "Roxborough Thin";
+  font-family: "Manrope", sans-serif;
   font-size: 3rem;
   text-align: left;
   padding: 1% 0 8%;

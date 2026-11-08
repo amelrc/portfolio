@@ -1,0 +1,122 @@
+{
+  "branding": {
+    "name": "Amel Caballero",
+    "company": "Amel Caballero BV",
+    "registration": "kvk 55667788",
+    "role": {
+      "en": "Product Design Consultant",
+      "nl": "Productdesignconsultant"
+    },
+    "portraitImage": "product-design-consultant.png"
+  },
+  "navigation": {
+    "home": { "en": "Home", "nl": "Home" },
+    "services": { "en": "Services", "nl": "Diensten" },
+    "work": { "en": "Work", "nl": "Werk" },
+    "about": { "en": "About", "nl": "Over mij" },
+    "contact": { "en": "Contact", "nl": "Contact" },
+    "startConversation": {
+      "en": "Start a conversation",
+      "nl": "Start een gesprek"
+    },
+    "information": {
+      "en": "Product design consulting for B2B software",
+      "nl": "Productdesignadvies voor B2B-software"
+    }
+  },
+  "home": {
+    "backgroundImages": [
+      "hill 1.png",
+      "hill 2.png",
+      "hill 3.png"
+    ],
+    "carouselIntervalMs": 120000,
+    "cardCarouselIntervalMs": 30000,
+    "headline": {
+      "en": {
+        "first": "Turning SaaS Complexity into Operational ",
+        "highlight": "Clarity",
+        "end": "."
+      },
+      "nl": {
+        "first": "SaaS-complexiteit omzetten in operationele ",
+        "highlight": "helderheid",
+        "end": "."
+      }
+    },
+    "description": {
+      "en": "Working directly on B2B software, internal tools and enterprise platforms without the overhead of hiring a full-time designer.",
+      "nl": "Ik werk direct aan B2B-software, interne tools en enterpriseplatformen, zonder de overhead van een fulltime designer."
+    },
+    "sunny": { "en": "Sunny", "nl": "Zonnig" },
+    "cards": [
+      {
+        "id": "assessment",
+        "type": "brand",
+        "title": { "en": "Software Assessment", "nl": "Softwareanalyse" },
+        "description": {
+          "en": "Identify your software bottlenecks in 2 minutes. Get a tailored sprint plan.",
+          "nl": "Ontdek in 2 minuten de knelpunten in je software. Ontvang een sprintplan op maat."
+        }
+      },
+      {
+        "id": "services",
+        "type": "light",
+        "href": "/services",
+        "title": { "en": "Services", "nl": "Diensten" },
+        "description": {
+          "en": "Explore 1-to-4 week productised sprints built to untangle software complexity.",
+          "nl": "Ontdek productized sprints van 1 tot 4 weken om softwarecomplexiteit aan te pakken."
+        }
+      },
+      {
+        "id": "contact",
+        "type": "glass",
+        "href": "/contact",
+        "title": { "en": "Contact", "nl": "Contact" },
+        "description": {
+          "en": "Discuss your software bottlenecks in a free 20-minute discovery call to align on scope and availability.",
+          "nl": "Bespreek je softwareknelpunten tijdens een gratis kennismakingsgesprek van 20 minuten en stem scope en beschikbaarheid af."
+        }
+      }
+    ],
+    "assessmentModal": {
+      "title": { "en": "Software Assessment", "nl": "Softwareanalyse" },
+      "description": {
+        "en": "Get a clearer view of your software bottlenecks and the next steps for your product.",
+        "nl": "Krijg meer inzicht in de knelpunten van je software en de volgende stappen voor je product."
+      },
+      "action": { "en": "Start a conversation", "nl": "Start een gesprek" },
+      "close": { "en": "Close", "nl": "Sluiten" }
+    }
+  },
+  "pages": {
+    "services": {
+      "title": { "en": "Services", "nl": "Diensten" },
+      "description": {
+        "en": "Explore 1-to-4 week productised sprints built to untangle software complexity.",
+        "nl": "Ontdek productized sprints van 1 tot 4 weken om softwarecomplexiteit aan te pakken."
+      },
+      "action": { "en": "Start a conversation", "nl": "Start een gesprek" }
+    },
+    "contact": {
+      "title": { "en": "Start a conversation", "nl": "Start een gesprek" },
+      "description": {
+        "en": "Discuss your software bottlenecks in a free 20-minute discovery call to align on scope and availability.",
+        "nl": "Bespreek je softwareknelpunten tijdens een gratis kennismakingsgesprek van 20 minuten en stem scope en beschikbaarheid af."
+      },
+      "action": { "en": "Explore services", "nl": "Bekijk de diensten" }
+    },
+    "about": {
+      "title": { "en": "About", "nl": "Over mij" },
+      "description": {
+        "en": "I design and build digital products, bringing product design and front-end development together to make software clearer and easier to use.",
+        "nl": "Ik ontwerp en bouw digitale producten en combineer productdesign met front-endontwikkeling om software duidelijker en gebruiksvriendelijker te maken."
+      },
+      "action": { "en": "Start a conversation", "nl": "Start een gesprek" }
+    }
+  },
+  "contentPage": {
+    "backHome": { "en": "Back to home", "nl": "Terug naar home" }
+  }
+}

@@ -20,7 +20,7 @@ export const Container = styled.div`
 export const H3 = styled.h3`
   color: #bc9dfe;
   font-size: 1rem;
-  font-family: SF UI Display Thin;
+  font-family: "Manrope", sans-serif;
   font-weight: 200;
   text-transform: uppercase;
   @media ${device.tablet} {
@@ -31,7 +31,7 @@ export const H3 = styled.h3`
 export const H4 = styled.h4`
   text-align: center;
   font-size: 2rem;
-  font-family: Roxborough Thin;
+  font-family: "Manrope", sans-serif;
   font-weight: 500;
   color: #9747ff;
   text-align: start;
@@ -43,7 +43,7 @@ export const H4 = styled.h4`
 export const PText = styled.p`
   color: #c9ad74;
   font-size: 1.5rem;
-  font-family: SF UI Display Thin;
+  font-family: "Manrope", sans-serif;
   margin: 8% 0;
   text-transform: uppercase;
   @media ${device.tablet} {
@@ -78,7 +78,7 @@ export const TextColab = styled.p`
   text-align: start;
   color: #d3cfc0;
   font-size: 1rem;
-  font-family: SF UI Display Thin;
+  font-family: "Manrope", sans-serif;
   margin: 40px 0;
   @media ${device.tablet} {
     font-size: 1.5rem;
@@ -86,7 +86,7 @@ export const TextColab = styled.p`
 `;
 
 export const Input = styled.input`
-  font-family: SF UI Display Thin;
+  font-family: "Manrope", sans-serif;
   font-size: 1rem;
   margin-left: 4px;
   background: transparent;
@@ -120,7 +120,7 @@ export const ContactWrapper = styled.div`
   text-align: start;
   color: #d3cfc0;
   font-size: 1rem;
-  font-family: SF UI Display Thin;
+  font-family: "Manrope", sans-serif;
   margin: 40px 0;
   @media ${device.tablet} {
     font-size: 1.5rem;

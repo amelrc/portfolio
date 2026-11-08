@@ -103,7 +103,7 @@ const TextWrapper = styled.div`
 const Text = styled(motion.p)`
   font-size: 1.5rem;
 
-  font-family: SF UI Display Bold;
+  font-family: "Manrope", sans-serif;
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -118,7 +118,7 @@ const Text = styled(motion.p)`
 const Description = styled(motion.p)`
   font-size: 1rem;
 
-  font-family: SF UI Display Thin;
+  font-family: "Manrope", sans-serif;
 
   color: #230808;
 

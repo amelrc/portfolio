@@ -5,34 +5,10 @@
   cursor: none;
 }
 
+body {
+  font-family: "Manrope", sans-serif;
+}
+
 p {
   color: #36003a;
-}
-
-svg {
-  display: none;
-}
-
-@font-face {
-  font-family: "SF UI Display Thin";
-  src: url("./font/SF_UI_Display/thin.otf") format("truetype");
-}
-@font-face {
-  font-family: "SF UI Display Light";
-  src: url("./font/SF_UI_Display/light.otf") format("truetype");
-}
-
-@font-face {
-  font-family: "SF UI Display Bold";
-  src: url("./font/SF_UI_Display/semibold.otf") format("truetype");
-}
-
-@font-face {
-  font-family: "Roxborough Thin";
-  src: url("./font/Roxborough/RoxboroughCF-Thin.otf") format("truetype");
-}
-
-@font-face {
-  font-family: "Roxborough Bold";
-  src: url("./font/Roxborough/RoxboroughCF-DemiBold.otf") format("truetype");
 }

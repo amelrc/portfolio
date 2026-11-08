@@ -40,7 +40,7 @@ const TextWrapper = styled.div`
 `;
 
 export const H3 = styled.h3`
-  font-family: "SF UI Display Thin";
+  font-family: "Manrope", sans-serif;
   color: #49014f;
   font-size: 1.5rem;
   padding: 10px 0;
@@ -52,7 +52,7 @@ export const H3 = styled.h3`
 export const Description = styled.p`
   color: #230808;
   font-size: 1rem;
-  font-family: SF UI Display Thin;
+  font-family: "Manrope", sans-serif;
   line-height: 125%;
 
   @media ${device.tablet} {

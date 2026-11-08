@@ -45,6 +45,17 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+## Website content and images
+
+The redesigned homepage, navigation, and the Services, About, and Contact page copy are configured in `src/data/websiteContent.json`. Each value has `en` and `nl` entries. The existing case-study pages retain their original content.
+
+Homepage background slides are in `src/images`:
+
+- `hill 1.png`, `hill 2.png`, and `hill 3.png` are used on desktop and mobile. The carousel advances every two minutes with a progress indicator on desktop; the images change automatically on mobile without showing background indicators.
+- `product-design-consultant.png` (PNG, JPEG, or WebP) for the portrait in the consultant pill.
+
+Until the portrait image is present, the consultant pill uses a colored placeholder. The site typography uses Manrope from Google Fonts.
+
 ### Code Splitting
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)

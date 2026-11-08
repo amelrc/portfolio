@@ -58,7 +58,7 @@ const Logo = styled.img`
 const Heading = styled.h3`
   font-size: 2rem;
   margin-bottom: 1rem;
-  font-family: SF UI Display Thin;
+  font-family: "Manrope", sans-serif;
   text-transform: capitalize;
 
   @media ${device.tablet} {
@@ -69,7 +69,7 @@ const Heading = styled.h3`
 
 const Description = styled.p`
   font-size: 1rem;
-  font-family: SF UI Display Thin;
+  font-family: "Manrope", sans-serif;
 
   @media ${device.tablet} {
     font-size: 1.5rem;
