@@ -65,16 +65,13 @@ const getOrdinal = (day) => {
 const formatDate = (date, language) => {
   const locale = language === "nl" ? "nl-NL" : "en-GB";
   const weekday = new Intl.DateTimeFormat(locale, { weekday: "long" }).format(
-    date
+    date,
   );
   const month = new Intl.DateTimeFormat(locale, { month: "long" }).format(date);
   const day = date.getDate();
   return {
     weekday,
-    date:
-      language === "nl"
-        ? `${day} ${month}`
-        : `${month} ${getOrdinal(day)}`,
+    date: language === "nl" ? `${day} ${month}` : `${month} ${getOrdinal(day)}`,
   };
 };
 
@@ -82,8 +79,8 @@ const Home = ({ language, menuCollapsed }) => {
   const [now, setNow] = useState(() => new Date());
   const [activeBackground, setActiveBackground] = useState(0);
   const [activeCard, setActiveCard] = useState(0);
-  const [isMobile, setIsMobile] = useState(() =>
-    window.matchMedia("(max-width: 900px)").matches
+  const [isMobile, setIsMobile] = useState(
+    () => window.matchMedia("(max-width: 900px)").matches,
   );
   const [modalOpen, setModalOpen] = useState(false);
   const touchStartY = useRef(null);
@@ -103,7 +100,7 @@ const Home = ({ language, menuCollapsed }) => {
   const portrait = getSiteImage(content.branding.portraitImage);
 
   useEffect(() => {
-    const timerId = window.setInterval(() => setNow(new Date()), 30000);
+    const timerId = window.setInterval(() => setNow(new Date()), 5000);
     return () => window.clearInterval(timerId);
   }, []);
 
@@ -155,7 +152,7 @@ const Home = ({ language, menuCollapsed }) => {
     setActiveCard((index) =>
       delta < 0
         ? (index + 1) % cards.length
-        : (index - 1 + cards.length) % cards.length
+        : (index - 1 + cards.length) % cards.length,
     );
   };
 
@@ -204,7 +201,9 @@ const Home = ({ language, menuCollapsed }) => {
                 </div>
                 <h1>
                   <span className="headline-gradient">{headline.first}</span>
-                  <span className="headline-highlight">{headline.highlight}</span>
+                  <span className="headline-highlight">
+                    {headline.highlight}
+                  </span>
                   <span className="headline-gradient">{headline.end}</span>
                 </h1>
               </div>

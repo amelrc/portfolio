@@ -373,7 +373,7 @@
 }
 
 .carousel-indicators button.is-active::before {
-  animation: carousel-indicator-progress var(--indicator-duration, 120000ms)
+  animation: carousel-indicator-progress var(--indicator-duration, 60000ms)
     linear forwards;
 }
 
@@ -692,7 +692,7 @@
 
   .card-indicators button.is-active::before {
     animation: card-indicator-progress
-      var(--indicator-duration, 30000ms) linear forwards;
+      var(--indicator-duration, 5000ms) linear forwards;
   }
 
   @keyframes card-indicator-progress {

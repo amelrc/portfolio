@@ -49,12 +49,17 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 The redesigned homepage, navigation, and the Services, About, and Contact page copy are configured in `src/data/websiteContent.json`. Each value has `en` and `nl` entries. The existing case-study pages retain their original content.
 
+The Services page groups and service detail content are in `servicesPage.groups` and `servicesPage.detailTemplates` in that same JSON file. Add or edit service groups, sub-services, and the Why/What/When tab copy there; pinned services are currently held in app state for the contact-page flow to use later.
+
 Homepage background slides are in `src/images`:
 
-- `hill 1.png`, `hill 2.png`, and `hill 3.png` are used on desktop and mobile. The carousel advances every two minutes with a progress indicator on desktop; the images change automatically on mobile without showing background indicators.
+- `hill 1.png`, `hill 2.png`, and `hill 3.png` are used on desktop and mobile. The carousel advances every minute with a progress indicator on desktop; the images change automatically on mobile without showing background indicators.
+- The mobile homepage cards advance every five seconds and remain swipeable.
 - `product-design-consultant.png` (PNG, JPEG, or WebP) for the portrait in the consultant pill.
 
 Until the portrait image is present, the consultant pill uses a colored placeholder. The site typography uses Manrope from Google Fonts.
+
+On mobile, the primary navigation is fixed to the bottom edge of the viewport.
 
 ### Code Splitting
 

@@ -46,33 +46,77 @@ const Icon = ({ name, active = false }) => {
   if (name === "services") {
     return (
       <svg {...sharedProps}>
-        <path d="m12 2.75 8 4.5v9.5l-8 4.5-8-4.5v-9.5l8-4.5Z" />
-        <path d="m4.5 7.5 7.5 4.25 7.5-4.25M12 12v9" />
-        <path d="m8 5 8 4.5" />
+        <path
+          d="m12 2.75 8 4.5v9.5l-8 4.5-8-4.5v-9.5l8-4.5Z"
+          fill={active ? "currentColor" : "none"}
+        />
+        <path
+          d="m4.5 7.5 7.5 4.25 7.5-4.25M12 12v9"
+          stroke={active ? "#fff" : "currentColor"}
+        />
+        <path
+          d="m8 5 8 4.5"
+          stroke={active ? "#fff" : "currentColor"}
+        />
       </svg>
     );
   }
   if (name === "work") {
     return (
       <svg {...sharedProps}>
-        <rect x="3" y="7" width="18" height="13" rx="1.5" />
-        <path d="M8 7V4.5A1.5 1.5 0 0 1 9.5 3h5A1.5 1.5 0 0 1 16 4.5V7M3 12h18" />
+        <rect
+          x="3"
+          y="7"
+          width="18"
+          height="13"
+          rx="1.5"
+          fill={active ? "currentColor" : "none"}
+        />
+        <path
+          d="M8 7V4.5A1.5 1.5 0 0 1 9.5 3h5A1.5 1.5 0 0 1 16 4.5V7M3 12h18"
+          stroke={active ? "#fff" : "currentColor"}
+        />
       </svg>
     );
   }
   if (name === "about") {
     return (
       <svg {...sharedProps}>
-        <circle cx="12" cy="8" r="4" />
-        <path d="M4 20a8 8 0 0 1 16 0" />
+        <circle
+          cx="12"
+          cy="8"
+          r="4"
+          fill={active ? "currentColor" : "none"}
+        />
+        <path
+          d="M4 20a8 8 0 0 1 16 0"
+          fill={active ? "currentColor" : "none"}
+        />
       </svg>
     );
   }
   if (name === "contact") {
     return (
       <svg {...sharedProps}>
-        <rect x="3" y="5" width="18" height="14" rx="1.5" />
-        <path d="m4 7 8 6 8-6" />
+        <rect
+          x="3"
+          y="5"
+          width="18"
+          height="14"
+          rx="1.5"
+          fill={active ? "currentColor" : "none"}
+        />
+        <path
+          d="m4 7 8 6 8-6"
+          stroke={active ? "#fff" : "currentColor"}
+        />
+      </svg>
+    );
+  }
+  if (name === "pin") {
+    return (
+      <svg {...sharedProps}>
+        <path d="M8 3h8l-1 6 3 3v2h-5v7l-1 1-1-1v-7H6v-2l3-3-1-6Z" />
       </svg>
     );
   }
@@ -85,6 +129,79 @@ const Icon = ({ name, active = false }) => {
     );
   }
   return null;
+};
+
+const PinnedServicesControl = ({
+  language,
+  pinnedServices,
+  onRemove,
+  mobile = false,
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const groups = content.servicesPage.groups;
+  const pinnedItems = pinnedServices
+    .map((serviceId) => {
+      for (const group of groups) {
+        const service = group.services.find((item) => item.id === serviceId);
+        if (service) {
+          return {
+            id: service.id,
+            title: service.title[language],
+            group: group.title[language],
+          };
+        }
+      }
+      return null;
+    })
+    .filter(Boolean);
+
+  if (pinnedItems.length === 0) return null;
+
+  return (
+    <div
+      className={`pinned-services-control ${
+        mobile ? "is-mobile" : "is-desktop"
+      }`}
+    >
+      <button
+        type="button"
+        className="pinned-services-count"
+        aria-label={`${content.servicesPage.pinned[language]}: ${pinnedItems.length}`}
+        aria-expanded={isOpen}
+        aria-haspopup="dialog"
+        onClick={() => setIsOpen((open) => !open)}
+      >
+        <Icon name="pin" />
+        <span>{pinnedItems.length}</span>
+      </button>
+      {isOpen && (
+        <div
+          className="pinned-services-popover"
+          role="dialog"
+          aria-label={content.servicesPage.pinned[language]}
+        >
+          <strong>{content.servicesPage.pinned[language]}</strong>
+          <ul>
+            {pinnedItems.map((item) => (
+              <li key={item.id}>
+                <span>
+                  <small>{item.group}</small>
+                  <strong>{item.title}</strong>
+                </span>
+                <button
+                  type="button"
+                  aria-label={`${content.servicesPage.removePin[language]} ${item.title}`}
+                  onClick={() => onRemove(item.id)}
+                >
+                  {content.servicesPage.removePin[language]}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
 };
 
 const routes = [
@@ -101,7 +218,8 @@ const NavigationLink = ({ item, language, mobile = false }) => {
     ["/work", "/cases", "/heartbeat", "/taxapp", "/designsystem"].includes(
       location.pathname
     );
-  const isActive = item.key === "home" ? location.pathname === "/" : isWorkRoute;
+  const isActive =
+    item.key === "work" ? isWorkRoute : location.pathname === item.to;
   const label = content.navigation[item.key][language];
   return (
     <NavLink
@@ -126,8 +244,11 @@ const SiteNavigation = ({
   onLanguageChange,
   collapsed,
   onMenuToggle,
+  pinnedServices,
+  onTogglePinnedService,
 }) => {
   const [infoOpen, setInfoOpen] = useState(false);
+  const location = useLocation();
   const brand = content.branding;
   const menuClass = collapsed ? "is-collapsed" : "is-expanded";
 
@@ -227,10 +348,27 @@ const SiteNavigation = ({
           <img src={Logo} alt="" />
         </Link>
         <div className="mobile-header-controls">
+          <PinnedServicesControl
+            language={language}
+            pinnedServices={pinnedServices}
+            onRemove={onTogglePinnedService}
+            mobile
+          />
           <WeatherMini language={language} />
           <LanguageSwitch language={language} onChange={onLanguageChange} />
         </div>
       </div>
+
+      {location.pathname === "/services" && (
+        <div className="services-status">
+          <PinnedServicesControl
+            language={language}
+            pinnedServices={pinnedServices}
+            onRemove={onTogglePinnedService}
+          />
+          <WeatherMini language={language} />
+        </div>
+      )}
 
       <div className="desktop-language-switch">
         <LanguageSwitch language={language} onChange={onLanguageChange} />

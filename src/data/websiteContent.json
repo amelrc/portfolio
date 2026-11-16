@@ -30,8 +30,8 @@
       "hill 2.png",
       "hill 3.png"
     ],
-    "carouselIntervalMs": 120000,
-    "cardCarouselIntervalMs": 30000,
+    "carouselIntervalMs": 60000,
+    "cardCarouselIntervalMs": 5000,
     "headline": {
       "en": {
         "first": "Turning SaaS Complexity into Operational ",
@@ -118,5 +118,406 @@
   },
   "contentPage": {
     "backHome": { "en": "Back to home", "nl": "Terug naar home" }
+  },
+  "servicesPage": {
+    "eyebrow": { "en": "Services", "nl": "Diensten" },
+    "partnerCard": {
+      "title": { "en": "How We Partner", "nl": "Hoe we samenwerken" },
+      "description": {
+        "en": "Select your sprint model. Most clients start with Experience Mapping to isolate the issue first.",
+        "nl": "Kies je sprintmodel. De meeste klanten beginnen met ervaringsmapping om eerst het probleem helder te krijgen."
+      },
+      "action": { "en": "View Models", "nl": "Bekijk de modellen" }
+    },
+    "headline": {
+      "before": { "en": "The right work for ", "nl": "De juiste aanpak voor " },
+      "highlight": { "en": "the problem", "nl": "het probleem" },
+      "after": { "en": " you're facing.", "nl": " waar je tegenaan loopt." }
+    },
+    "viewAll": { "en": "View All Services", "nl": "Bekijk alle diensten" },
+    "allServices": { "en": "All Services", "nl": "Alle diensten" },
+    "readMore": { "en": "Read More", "nl": "Lees meer" },
+    "tabs": {
+      "why": { "en": "Why", "nl": "Waarom" },
+      "what": { "en": "What", "nl": "Wat" },
+      "when": { "en": "When", "nl": "Wanneer" }
+    },
+    "pin": { "en": "Pin Information", "nl": "Informatie bewaren" },
+    "unpin": { "en": "Unpin Information", "nl": "Informatie verwijderen" },
+    "pinned": { "en": "Pinned services", "nl": "Bewaarde diensten" },
+    "questions": { "en": "Questions?", "nl": "Vragen?" },
+    "removePin": { "en": "Remove", "nl": "Verwijderen" },
+    "previous": { "en": "Previous", "nl": "Vorige" },
+    "next": { "en": "Next", "nl": "Volgende" },
+    "paginationOf": { "en": "of", "nl": "van" },
+    "close": { "en": "Close", "nl": "Sluiten" },
+    "backToServices": { "en": "Back to all services", "nl": "Terug naar alle diensten" },
+    "groups": [
+      {
+        "id": "experience-mapping",
+        "title": { "en": "Experience Mapping", "nl": "Ervaringsmapping" },
+        "introTitle": {
+          "en": "Find out what's slowing your product down",
+          "nl": "Ontdek wat je product vertraagt"
+        },
+        "description": {
+          "en": "For teams that know something isn't working as it should, but the cause isn't clear. Users struggle to complete tasks, processes involve too many steps, or different parts of the product don't work well together.",
+          "nl": "Voor teams die weten dat iets niet goed werkt, maar de oorzaak nog niet kennen. Gebruikers hebben moeite met taken, processen bevatten te veel stappen of onderdelen van het product sluiten niet goed op elkaar aan."
+        },
+        "services": [
+          {
+            "id": "product-audit",
+            "title": { "en": "Product Audit", "nl": "Productaudit" },
+            "summary": {
+              "en": "Identify where your software is dropping users before wasting sprint capacity on the wrong fix.",
+              "nl": "Ontdek waar gebruikers afhaken voordat je sprintcapaciteit besteedt aan de verkeerde oplossing."
+            },
+            "detail": "productAudit"
+          },
+          {
+            "id": "user-research",
+            "title": { "en": "User Research", "nl": "Gebruikersonderzoek" },
+            "summary": {
+              "en": "Map actual user behaviour first so you build the right capability the first time.",
+              "nl": "Breng eerst het gedrag van echte gebruikers in kaart, zodat je meteen de juiste functionaliteit bouwt."
+            },
+            "detail": "standard"
+          }
+        ]
+      },
+      {
+        "id": "product-strategy",
+        "title": { "en": "Product Strategy", "nl": "Productstrategie" },
+        "introTitle": {
+          "en": "Make your next product decisions with confidence",
+          "nl": "Neem met vertrouwen je volgende productbeslissingen"
+        },
+        "description": {
+          "en": "Turn competing ideas and unclear priorities into a focused direction your team can act on.",
+          "nl": "Vertaal concurrerende ideeën en onduidelijke prioriteiten naar een heldere richting waar je team mee aan de slag kan."
+        },
+        "services": [
+          {
+            "id": "roadmap-planning",
+            "title": { "en": "Roadmap Planning", "nl": "Roadmapplanning" },
+            "summary": {
+              "en": "Align your product goals, customer needs and delivery capacity around a clear roadmap.",
+              "nl": "Breng productdoelen, klantbehoeften en ontwikkelcapaciteit samen in een duidelijke roadmap."
+            },
+            "detail": "standard"
+          },
+          {
+            "id": "feature-prioritisation",
+            "title": {
+              "en": "Feature Prioritisation",
+              "nl": "Featureprioritering"
+            },
+            "summary": {
+              "en": "Focus your team on the improvements that create the most meaningful impact.",
+              "nl": "Richt je team op verbeteringen die de meeste waarde opleveren."
+            },
+            "detail": "standard"
+          }
+        ]
+      },
+      {
+        "id": "design-delivery",
+        "title": { "en": "Design Delivery", "nl": "Designuitvoering" },
+        "introTitle": {
+          "en": "Move from validated ideas to thoughtful experiences",
+          "nl": "Vertaal gevalideerde ideeën naar doordachte ervaringen"
+        },
+        "description": {
+          "en": "Give your team the design direction, practical patterns and momentum to ship a clearer product.",
+          "nl": "Geef je team de ontwerpvisie, praktische patronen en vaart om een duidelijker product te realiseren."
+        },
+        "services": [
+          {
+            "id": "product-design",
+            "title": { "en": "Product Design", "nl": "Productdesign" },
+            "summary": {
+              "en": "Shape clear, accessible product flows that make complex work easier to complete.",
+              "nl": "Ontwerp heldere, toegankelijke productflows die complex werk eenvoudiger maken."
+            },
+            "detail": "standard"
+          },
+          {
+            "id": "design-systems",
+            "title": { "en": "Design Systems", "nl": "Designsystemen" },
+            "summary": {
+              "en": "Create reusable design foundations that help your product and team scale consistently.",
+              "nl": "Leg een herbruikbare ontwerpstructuur aan waarmee je product en team consistent kunnen groeien."
+            },
+            "detail": "standard"
+          }
+        ]
+      }
+    ],
+    "detailTemplates": {
+      "productAudit": {
+        "why": {
+          "heading": {
+            "en": "Find out what's holding your product back!",
+            "nl": "Ontdek wat je product tegenhoudt!"
+          },
+          "intro": {
+            "en": "As your software grows, new features, changing requirements and quick fixes can make the product harder to use and maintain.",
+            "nl": "Naarmate je software groeit, kunnen nieuwe functies, veranderende eisen en snelle oplossingen het product moeilijker in gebruik en onderhoud maken."
+          },
+          "body": {
+            "en": "A Product Audit evaluates your existing product to identify usability problems, inconsistencies and opportunities for improvement. It gives you a clear picture of what needs attention and where to focus your resources.",
+            "nl": "Een productaudit beoordeelt je bestaande product op gebruiksproblemen, inconsistenties en verbetermogelijkheden. Zo zie je duidelijk wat aandacht nodig heeft en waar je je middelen het beste inzet."
+          },
+          "insights": [
+            {
+              "title": { "en": "Why It Matters", "nl": "Waarom dit belangrijk is" },
+              "slides": [
+                {
+                  "en": "See the bigger picture. Understand how well your product works as a whole, not just screen by screen.",
+                  "nl": "Bekijk het grotere geheel. Begrijp hoe goed je product als geheel werkt, niet alleen per scherm."
+                },
+                {
+                  "en": "Spot friction in the journeys that matter most to your customers.",
+                  "nl": "Ontdek waar frictie ontstaat in de belangrijkste klantreizen."
+                },
+                {
+                  "en": "Give your team a shared view of the experience to improve.",
+                  "nl": "Geef je team een gedeeld beeld van de ervaring die beter kan."
+                },
+                {
+                  "en": "Make design and development decisions with clearer evidence.",
+                  "nl": "Neem ontwerp- en ontwikkelbeslissingen op basis van duidelijker bewijs."
+                }
+              ]
+            },
+            {
+              "title": { "en": "Cost Of Inaction", "nl": "Kosten van niets doen" },
+              "slides": [
+                {
+                  "en": "You keep fixing the symptoms instead of the problem. Individual screens get updated, but the underlying issues remain.",
+                  "nl": "Je blijft symptomen oplossen in plaats van het probleem. Schermen worden aangepast, maar de onderliggende problemen blijven bestaan."
+                },
+                {
+                  "en": "Users lose time working around confusing or inconsistent flows.",
+                  "nl": "Gebruikers verliezen tijd doordat ze onduidelijke of inconsistente flows moeten omzeilen."
+                },
+                {
+                  "en": "Sprint capacity goes to low-impact fixes instead of meaningful improvements.",
+                  "nl": "Sprintcapaciteit gaat naar oplossingen met weinig impact in plaats van betekenisvolle verbeteringen."
+                },
+                {
+                  "en": "Small usability issues compound as the product grows.",
+                  "nl": "Kleine gebruiksproblemen stapelen zich op terwijl het product groeit."
+                }
+              ]
+            }
+          ]
+        },
+        "what": {
+          "heading": { "en": "What I do", "nl": "Wat ik doe" },
+          "description": {
+            "en": "I audit your product workflows, navigation, and core task flows against usability standards to isolate friction and eliminate unnecessary complexity.",
+            "nl": "Ik beoordeel productworkflows, navigatie en kerntaken aan de hand van gebruiksstandaarden om frictie en onnodige complexiteit weg te nemen."
+          },
+          "deliverablesLabel": { "en": "Deliverables", "nl": "Resultaten" },
+          "deliverables": [
+            {
+              "title": { "en": "Diagnostic Audit Report", "nl": "Diagnostisch auditrapport" },
+              "description": {
+                "en": "Comprehensive breakdown of usability friction, UX inconsistencies, and workflow bottlenecks.",
+                "nl": "Uitgebreid overzicht van gebruiksfrictie, UX-inconsistenties en knelpunten in workflows."
+              }
+            },
+            {
+              "title": {
+                "en": "Impact-Prioritized Backlog",
+                "nl": "Op impact geprioriteerde backlog"
+              },
+              "description": {
+                "en": "Issues categorized by severity and effort to prevent wasted development cycles.",
+                "nl": "Problemen gerangschikt op ernst en inspanning om verspilde ontwikkelcycli te voorkomen."
+              }
+            },
+            {
+              "title": {
+                "en": "Actionable Redesign Scenarios",
+                "nl": "Concrete herontwerpscenario's"
+              },
+              "description": {
+                "en": "Practical UI/UX solutions and flow optimizations for critical user paths.",
+                "nl": "Praktische UI/UX-oplossingen en flowoptimalisaties voor belangrijke gebruikersroutes."
+              }
+            },
+            {
+              "title": {
+                "en": "Implementation Roadmap",
+                "nl": "Implementatieroadmap"
+              },
+              "description": {
+                "en": "A structured debrief with clear, execution-ready next steps for your product and engineering teams.",
+                "nl": "Een gestructureerde terugkoppeling met concrete, direct uitvoerbare vervolgstappen voor product- en engineeringteams."
+              }
+            }
+          ],
+          "resultTitle": { "en": "The Result", "nl": "Het resultaat" },
+          "result": {
+            "en": "Zero guesswork for your roadmap. Your engineering team gets a prioritised action plan to fix critical UX bottlenecks, streamline development focus, and ship high-impact improvements faster.",
+            "nl": "Geen giswerk meer voor je roadmap. Je engineeringteam krijgt een geprioriteerd actieplan om kritieke UX-knelpunten op te lossen, de ontwikkelfocus te stroomlijnen en sneller verbeteringen met impact te leveren."
+          }
+        },
+        "when": {
+          "heading": {
+            "en": "When to use a Product Audit",
+            "nl": "Wanneer kies je voor een productaudit?"
+          },
+          "signals": [
+            {
+              "en": "Your product has grown more complex over time.",
+              "nl": "Je product is in de loop der tijd complexer geworden."
+            },
+            {
+              "en": "Users struggle with navigation or completing tasks.",
+              "nl": "Gebruikers hebben moeite met navigeren of het uitvoeren van taken."
+            },
+            {
+              "en": "The interface has become inconsistent.",
+              "nl": "De interface is inconsistent geworden."
+            },
+            {
+              "en": "You're planning a redesign or major product update.",
+              "nl": "Je plant een herontwerp of een grote productupdate."
+            },
+            {
+              "en": "You need an independent assessment of the current experience.",
+              "nl": "Je wilt een onafhankelijke beoordeling van de huidige ervaring."
+            }
+          ]
+        }
+      },
+      "standard": {
+        "why": {
+          "heading": {
+            "en": "Understand what your team needs next",
+            "nl": "Ontdek wat je team hierna nodig heeft"
+          },
+          "intro": {
+            "en": "A focused sprint helps turn an unclear challenge into a practical next step.",
+            "nl": "Een gerichte sprint vertaalt een onduidelijke uitdaging naar een praktische volgende stap."
+          },
+          "body": {
+            "en": "Work together with an experienced product designer to understand the situation, align on the right opportunity and create a clear direction for your team.",
+            "nl": "Werk samen met een ervaren productdesigner om de situatie te begrijpen, de juiste kans te bepalen en een heldere richting voor je team te creëren."
+          },
+          "insights": [
+            {
+              "title": { "en": "Why It Matters", "nl": "Waarom dit belangrijk is" },
+              "slides": [
+                {
+                  "en": "Create a shared understanding of the challenge before committing to a solution.",
+                  "nl": "Creëer een gedeeld begrip van de uitdaging voordat je je vastlegt op een oplossing."
+                },
+                {
+                  "en": "Bring customer needs and business goals into the same conversation.",
+                  "nl": "Breng klantbehoeften en bedrijfsdoelen samen in hetzelfde gesprek."
+                },
+                {
+                  "en": "Give your team a practical direction for the next sprint.",
+                  "nl": "Geef je team een praktische richting voor de volgende sprint."
+                },
+                {
+                  "en": "Make the next decision with more clarity and confidence.",
+                  "nl": "Neem de volgende beslissing met meer duidelijkheid en vertrouwen."
+                }
+              ]
+            },
+            {
+              "title": { "en": "Cost Of Inaction", "nl": "Kosten van niets doen" },
+              "slides": [
+                {
+                  "en": "Unclear priorities make it harder to focus time and effort.",
+                  "nl": "Onduidelijke prioriteiten maken het lastiger om tijd en inzet te richten."
+                },
+                {
+                  "en": "Teams can spend time solving different versions of the same problem.",
+                  "nl": "Teams kunnen tijd besteden aan verschillende versies van hetzelfde probleem."
+                },
+                {
+                  "en": "Assumptions remain untested as the product continues to grow.",
+                  "nl": "Aannames blijven ongetest terwijl het product verder groeit."
+                },
+                {
+                  "en": "Potential improvements are delayed by a lack of direction.",
+                  "nl": "Mogelijke verbeteringen lopen vertraging op door een gebrek aan richting."
+                }
+              ]
+            }
+          ]
+        },
+        "what": {
+          "heading": { "en": "What I do", "nl": "Wat ik doe" },
+          "description": {
+            "en": "I work with your team to understand the challenge, explore opportunities and shape a focused, actionable outcome.",
+            "nl": "Ik werk met je team om de uitdaging te begrijpen, kansen te verkennen en een gericht, uitvoerbaar resultaat vorm te geven."
+          },
+          "deliverablesLabel": { "en": "Deliverables", "nl": "Resultaten" },
+          "deliverables": [
+            {
+              "title": { "en": "Shared Direction", "nl": "Gedeelde richting" },
+              "description": {
+                "en": "A clear view of the opportunity and the people it should help.",
+                "nl": "Een helder beeld van de kans en de mensen die je ermee wilt helpen."
+              }
+            },
+            {
+              "title": { "en": "Prioritized Opportunities", "nl": "Geprioriteerde kansen" },
+              "description": {
+                "en": "A focused set of next steps based on customer and business value.",
+                "nl": "Gerichte vervolgstappen op basis van klant- en bedrijfswaarde."
+              }
+            },
+            {
+              "title": { "en": "Practical Recommendations", "nl": "Praktische aanbevelingen" },
+              "description": {
+                "en": "Ideas and actions your team can confidently take forward.",
+                "nl": "Ideeën en acties waar je team met vertrouwen mee verder kan."
+              }
+            }
+          ],
+          "resultTitle": { "en": "The Result", "nl": "Het resultaat" },
+          "result": {
+            "en": "A clear, practical outcome that helps your team focus on the right work and make progress with confidence.",
+            "nl": "Een helder, praktisch resultaat waarmee je team zich op het juiste werk richt en met vertrouwen vooruitgang boekt."
+          }
+        },
+        "when": {
+          "heading": {
+            "en": "When this service can help",
+            "nl": "Wanneer deze dienst kan helpen"
+          },
+          "signals": [
+            {
+              "en": "Your team needs a clearer direction for upcoming work.",
+              "nl": "Je team heeft een duidelijkere richting nodig voor het komende werk."
+            },
+            {
+              "en": "Important decisions are being delayed by uncertainty.",
+              "nl": "Belangrijke beslissingen worden uitgesteld door onzekerheid."
+            },
+            {
+              "en": "Customer needs and product priorities feel disconnected.",
+              "nl": "Klantbehoeften en productprioriteiten lijken niet op elkaar aan te sluiten."
+            },
+            {
+              "en": "You want to focus effort on the most valuable improvements.",
+              "nl": "Je wilt je inspanningen richten op de meest waardevolle verbeteringen."
+            },
+            {
+              "en": "The team is ready to turn ideas into an actionable plan.",
+              "nl": "Het team is klaar om ideeën om te zetten in een uitvoerbaar plan."
+            }
+          ]
+        }
+      }
+    }
   }
 }
